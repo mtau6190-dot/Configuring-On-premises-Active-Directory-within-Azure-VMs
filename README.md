@@ -92,7 +92,7 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 <img width="615" height="523" alt="image" src="https://github.com/user-attachments/assets/9c5aa835-610a-4d3e-9ea4-6468d0a30f61" />
 <img width="567" height="693" alt="image" src="https://github.com/user-attachments/assets/3f59c76c-565e-4f52-95c6-d864d380bd02" />
 
-<P>Created an Organizational Unit(OU) and named it "_EMPLOYEES", created another one and named it "_ADMINS", and then created a new employee named "Reece Walsh" same password with a username of reece_admin added the user to the "Domain Admins" Security Group</P>. Logged out / closed the connection to dc-1 and logged back in as "mydomain.com\reece_admin". This was the account I used for my project
+<P>I organized Active Directory by creating two OUs: _EMPLOYEES and _ADMINS. Then I added a new user, Reece Walsh with the username reece_admin, and elevated them by adding to the Domain Admins group. Finally, I logged back into DC‑1 using mydomain.com\reece_admin, confirming the account’s admin privileges and making it the primary account for your project.</P>
 
 
 -2.3 - Joined Client-1 to my domain (mydomain.com)
