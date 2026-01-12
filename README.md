@@ -65,6 +65,13 @@ From Dynamic to Static: <br>
 I used DC‑1’s public IP to connect via Remote Desktop so I could access the server. Once inside, I disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.
 <br>
 <br>
+1.6 - I then set "client-1"s DNS Settings to "dc-1"s private IP Address. Then Logged into "client-1" via remote desktop connection, and then ping dc-1s private IP Address to ensure ping succeeded.<br>
+<img width="895" height="766" alt="image" src="https://github.com/user-attachments/assets/aae7f01b-295f-48a3-8fe8-e63049b996c5" />
+
+<img width="1600" height="687" alt="image" src="https://github.com/user-attachments/assets/a9a4af3b-45dd-4855-837a-5aeb5629c1a5" /><br>
+
+<img width="936" height="776" alt="image" src="https://github.com/user-attachments/assets/490907a8-f9d1-476c-a7b7-0690d70ca14e" /><br>
+Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, ensuring it uses the Domain Controller for name resolution. After logging into Client‑1 via RDP, I tested connectivity by pinging DC‑1’s private IP. The successful ping confirmed that both VMs are on the same network, DNS is correctly set, and Client‑1 can reliably communicate with DC‑1.<br>
 
 - Step 2
 - Step 3
