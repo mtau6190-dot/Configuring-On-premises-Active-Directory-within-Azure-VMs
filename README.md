@@ -65,7 +65,7 @@ From Dynamic to Static: <br>
 I used DC‑1’s public IP to connect via Remote Desktop so I could access the server. Once inside, I disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.
 <br>
 <br>
-1.6 - I then set "client-1"s DNS Settings to "dc-1"s private IP Address. Then Logged into "client-1" via remote desktop connection, and then ping dc-1s private IP Address to ensure ping succeeded.<br>
+-1.6 - I then set "client-1"s DNS Settings to "dc-1"s private IP Address. Then Logged into "client-1" via remote desktop connection, and then ping dc-1s private IP Address to ensure ping succeeded.<br>
 <img width="895" height="766" alt="image" src="https://github.com/user-attachments/assets/aae7f01b-295f-48a3-8fe8-e63049b996c5" />
 
 <img width="1600" height="687" alt="image" src="https://github.com/user-attachments/assets/a9a4af3b-45dd-4855-837a-5aeb5629c1a5" /><br>
@@ -73,11 +73,21 @@ I used DC‑1’s public IP to connect via Remote Desktop so I could access the 
 <img width="936" height="776" alt="image" src="https://github.com/user-attachments/assets/490907a8-f9d1-476c-a7b7-0690d70ca14e" /><br>
 Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, ensuring it uses the Domain Controller for name resolution. After logging into Client‑1 via RDP, I tested connectivity by pinging DC‑1’s private IP. The successful ping confirmed that both VMs are on the same network, DNS is correctly set, and Client‑1 can reliably communicate with DC‑1.<br>
 
-1.7 - From client-1, I ran the command "ipconfig /all" to check and confirm that client-1s dns is dc-1s private IP Address. Therefore,making this Active Directory preparation a success.
+-1.7 - From client-1, I ran the command "ipconfig /all" to check and confirm that client-1s dns is dc-1s private IP Address. Therefore,making this Active Directory preparation a success.
 <img width="951" height="866" alt="image" src="https://github.com/user-attachments/assets/fd4bc315-717f-4bc9-ac53-901fdf51aac3" /><br>
 <P>Running ipconfig /all on Client‑1 allowed me to view its full network configuration, including the DNS server settings. By confirming that Client‑1’s DNS points to DC‑1’s private IP address, I verified that the client is correctly configured to use the Domain Controller for name resolution. This successful check, combined with the earlier ping test, proves that the network setup and DNS integration are working as intended, completing the Active Directory preparation phase successfully.</P>
 
-<h3>Step 2 - Deployed Active Directory</h3><br/>
+<h3>Step 2 - Deployed Active Directory</h3>
+<h4>PART 1</h4>
+
+-2.1 - Installed Active Directory in "dc-1". This VM serves as the Windows Server 2022 and then promoted the Server as the Domain Controller (DC): Set up a new forest as "mydomain.com". Restarted and logged back in as: "mydomain.com\labUser"
+<img width="1309" height="896" alt="image" src="https://github.com/user-attachments/assets/c3cf7247-33da-4d3a-9265-13643f04686c" />
+<img width="923" height="712" alt="image" src="https://github.com/user-attachments/assets/c2342f01-683c-47af-bd9a-19b32b0707f0" />
+
+
+<br>
+-2.2 - Created a Domain User within the Domain<br>
+-2.3 - Joined Client-1 to my domain (mydomain.com)
 
 - Step 3
 - Step 4
