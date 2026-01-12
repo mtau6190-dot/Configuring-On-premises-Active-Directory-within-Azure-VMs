@@ -53,6 +53,12 @@ Client‑1: Runs Windows 10, acts as a workstation to join and test the domain.<
 Together, they simulate an on‑premises AD environment inside Azure, letting me practice real IT infrastructure tasks like DNS, domain joins, and security.
 <br />
 <br>
+-1.4 - Set Domain Controller's NIC Private Address to be Static. <br>
+From Dynamic to Static: <br>
+<img width="735" height="867" alt="image" src="https://github.com/user-attachments/assets/6b728d0c-e5ec-40fe-862d-a34a0b8ff721" /></b>
+<br>
+<img width="730" height="862" alt="image" src="https://github.com/user-attachments/assets/2a83104e-ff9b-4a63-a64e-9463876d9a1b" />
+<p>Successfully set DC‑1’s IP address to static so it remains fixed and reliable. A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
 - Step 2
 - Step 3
 - Step 4
