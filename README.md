@@ -21,9 +21,18 @@ Tutorial & Implementation Walkthrough:<br/>
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1 - Setup Domain Controller in Azure Environment
-- 1.1 - Created a Resource Group in Azure
+- Step 1 - Setup Domain Controller in Azure Environment<br/>
+- 1.1 - Created a Resource Group in Azure & named it "AD-Lab"
+  <img width="1912" height="676" alt="image" src="https://github.com/user-attachments/assets/b662c551-3f43-49a1-928f-78d9c11913fb" />
+A resource group is like a container that holds related resources (VMs, networks, storage, etc.) for a project. It is easier to organize, secure, manage, and clean up.
+<br />
 - 1.2 - Created a Virtual Network & Subnet
+<img width="1542" height="755" alt="image" src="https://github.com/user-attachments/assets/8cb27c56-44e9-42dc-ab6d-f10e3f1c4e38" />
+Created a Virtual Network (VNet) in Azure and named it "AD-VNet". It is a private network for my resources.
+This Virtual Network will keep my VMs and services secure from the public internet and allows the VMs to talk to each other privately.
+By creating the Virtual Network, I can define subnets, IP ranges, and apply security rules (NSGs).
+My "AD‑VNet" is the foundation that connects and secures all resources in my Active Directory lab.
+<br />
 - 1.3 - Created the Domain Controller VM (Windows Server 22) & named it "dc-1".
 - Step 2
 - Step 3
