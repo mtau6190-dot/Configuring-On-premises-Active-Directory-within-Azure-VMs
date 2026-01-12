@@ -102,6 +102,9 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 <img width="942" height="467" alt="image" src="https://github.com/user-attachments/assets/bbc21f21-d8dc-47d6-8e04-05d274f003a4" />
 <p>I joined Client‑1 to the domain by logging in as the local admin and connecting it to mydomain.com, which required a restart. Back on DC‑1, I confirmed Client‑1 appeared in Active Directory Users and Computers (ADUC), proving the join was successful. Finally, I created a new OU called _CLIENTS and moved Client‑1 into it, organizing domain resources for easier management.</p>
 
+<h4>PART 2</h4>
+-2.4 - Setup Remote Desktop for Non-Administrative Users on Client-1(Windows 11).<br>
+<br>
 
 
 - Step 3
