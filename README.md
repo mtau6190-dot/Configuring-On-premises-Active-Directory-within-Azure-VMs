@@ -59,6 +59,13 @@ From Dynamic to Static: <br>
 <br>
 <img width="730" height="862" alt="image" src="https://github.com/user-attachments/assets/2a83104e-ff9b-4a63-a64e-9463876d9a1b" />
 <p>Successfully set DC‑1’s IP address to static so it remains fixed and reliable. A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
+-1.5 - Copied "dc-1"s Public IP Address, then logged into "dc-1" via Remote Desktop, and disabled the windows Firewall for testing connectivity.<br>
+<img width="1915" height="796" alt="image" src="https://github.com/user-attachments/assets/55886a9b-0974-40a0-804e-bb0ca7129def" />
+<img width="1112" height="647" alt="image" src="https://github.com/user-attachments/assets/46df8be8-17b1-4b9f-bbab-a72cbe91ca70" /><br>
+I used DC‑1’s public IP to connect via Remote Desktop so I could access the server. Once inside, I disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.
+<br>
+<br>
+
 - Step 2
 - Step 3
 - Step 4
