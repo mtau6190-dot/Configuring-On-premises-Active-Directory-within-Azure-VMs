@@ -32,7 +32,8 @@ Step 4: Created Group Policy and Managed Accoounts<br>
 - 1.1 - Created a Resource Group in Azure & named it "AD-Lab"
   <img width="1912" height="676" alt="image" src="https://github.com/user-attachments/assets/b662c551-3f43-49a1-928f-78d9c11913fb" />
 A resource group is like a container that holds related resources (VMs, networks, storage, etc.) for a project. It is easier to organize, secure, manage, and clean up.
-<br />
+<br>
+<br>
 - 1.2 - Created a Virtual Network & Subnet
 <img width="1542" height="755" alt="image" src="https://github.com/user-attachments/assets/8cb27c56-44e9-42dc-ab6d-f10e3f1c4e38" />
 Created a Virtual Network (VNet) in Azure and named it "AD-VNet". It is a private network for my resources.
