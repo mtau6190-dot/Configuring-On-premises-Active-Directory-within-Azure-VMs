@@ -3,14 +3,16 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+Project Summary:<br />
+<br />
+This project demonstrates the setup and configuration of IT infrastructure in Microsoft Azure. It includes Active Directory deployment, DNS configuration, network security, file sharing, and application installation.<br />
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
+Tutorial & Implementation Walkthrough:<br/>
+- **Languages Used:** PowerShell, CMD
+- **Environments:** Azure, Windows Server 2022, Windows 10
+- **Technologies/Services:** Azure Virtual Machines, Remote Desktop, Network Security Groups (NSGs), DNS, File Shares, osTicket
 
 <h2>Operating Systems Used </h2>
 
@@ -19,7 +21,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
+- Step 1 - Setup Domain Controller in Azure Environment
+- 1.1 - Created a Resource Group in Azure
+- 1.2 - Created a Virtual Network & Subnet
+- 1.3 - Created the Domain Controller VM (Windows Server 22) & named it "dc-1".
 - Step 2
 - Step 3
 - Step 4
