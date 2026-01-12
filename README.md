@@ -11,13 +11,13 @@ This project demonstrates the setup and configuration of IT infrastructure in Mi
 
 Tutorial & Implementation Walkthrough:<br/>
 - **Languages Used:** PowerShell, CMD
-- **Environments:** Azure, Windows Server 2022, Windows 10
+- **Environments:** Azure, Windows Server 2022, Windows 11
 - **Technologies/Services:** Azure Virtual Machines, Remote Desktop, Network Security Groups (NSGs), DNS, File Shares, osTicket
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)
+- Windows Server 2022 Datacenter: Azure Edition - x64 Gen2
+- Windows 11 Pro (25H2) - x64 Gen2
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
