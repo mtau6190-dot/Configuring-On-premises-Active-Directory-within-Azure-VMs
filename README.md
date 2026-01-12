@@ -86,7 +86,15 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 <p>I installed Active Directory on DC‑1 (Windows Server 2022) and promoted it to a Domain Controller by creating a new forest called mydomain.com. This established the domain structure and centralized authentication. After the server restarted, I logged in using the domain account mydomain.com\labUser, confirming that the domain was successfully created and functional.</p>
 
 <br>
--2.2 - Created a Domain User within the Domain<br>
+-2.2 - Created an Admin & Normal User Account in Active Directory Users & Computers(ADUC).<br>
+<img width="831" height="572" alt="image" src="https://github.com/user-attachments/assets/fe78d843-fd9e-4768-9013-a4d131a88f0d" />
+<img width="890" height="643" alt="image" src="https://github.com/user-attachments/assets/246bff58-b55f-47bc-800f-6a9e50b7c0ea" />
+<img width="615" height="523" alt="image" src="https://github.com/user-attachments/assets/9c5aa835-610a-4d3e-9ea4-6468d0a30f61" />
+<img width="567" height="693" alt="image" src="https://github.com/user-attachments/assets/3f59c76c-565e-4f52-95c6-d864d380bd02" />
+
+<P>Created an Organizational Unit(OU) and named it "_EMPLOYEES", created another one and named it "_ADMINS", and then created a new employee named "Reece Walsh" same password with a username of reece_admin added the user to the "Domain Admins" Security Group</P>. Logged out / closed the connection to dc-1 and logged back in as "mydomain.com\reece_admin". This was the account I used for my project
+
+
 -2.3 - Joined Client-1 to my domain (mydomain.com)
 
 - Step 3
