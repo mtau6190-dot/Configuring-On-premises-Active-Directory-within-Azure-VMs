@@ -21,7 +21,7 @@ Tutorial & Implementation Walkthrough:<br/>
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1 - Setup Domain Controller in Azure Environment<br/>
+- Step 1 - Prepared the Active Directory Infrastructure in Azure Environment<br/>
 - 1.1 - Created a Resource Group in Azure & named it "AD-Lab"
   <img width="1912" height="676" alt="image" src="https://github.com/user-attachments/assets/b662c551-3f43-49a1-928f-78d9c11913fb" />
 A resource group is like a container that holds related resources (VMs, networks, storage, etc.) for a project. It is easier to organize, secure, manage, and clean up.
@@ -33,7 +33,18 @@ This Virtual Network will keep my VMs and services secure from the public intern
 By creating the Virtual Network, I can define subnets, IP ranges, and apply security rules (NSGs).
 My "AD‑VNet" is the foundation that connects and secures all resources in my Active Directory lab.
 <br />
-- 1.3 - Created the Domain Controller VM (Windows Server 22) & named it "dc-1".
+<br/>
+- 1.3 - Created the Domain Controller VM (Windows Server 22) & named it "dc-1" & also created the Client VM (Windows 11 Pro) & named it "Client-1".<br>
+dc-1 VM:
+<img width="1938" height="920" alt="image" src="https://github.com/user-attachments/assets/68e2d74b-9d12-411e-a752-3f928cbe4db7" />
+client-1 VM:
+<img width="1949" height="936" alt="image" src="https://github.com/user-attachments/assets/ace9c816-c7a2-459b-bb64-6e8b9aa0c5ec" />
+Successfully created two VMs (DC‑1 and Client‑1) in Azure gives me:<br>
+Domain Controller (DC‑1): Runs Windows Server, provides Active Directory, DNS, and authentication services.<br>
+Client‑1: Runs Windows 10, acts as a workstation to join and test the domain.<br>
+Together, they simulate an on‑premises AD environment inside Azure, letting me practice real IT infrastructure tasks like DNS, domain joins, and security.
+<br />
+<br>
 - Step 2
 - Step 3
 - Step 4
