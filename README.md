@@ -102,13 +102,14 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 <img width="942" height="467" alt="image" src="https://github.com/user-attachments/assets/bbc21f21-d8dc-47d6-8e04-05d274f003a4" />
 <p>I joined Client‑1 to the domain by logging in as the local admin and connecting it to mydomain.com, which required a restart. Back on DC‑1, I confirmed Client‑1 appeared in Active Directory Users and Computers (ADUC), proving the join was successful. Finally, I created a new OU called _CLIENTS and moved Client‑1 into it, organizing domain resources for easier management.</p>
 
+<h3>Step 3 - Created Users with Powershell</h3>
 <h4>PART 2</h4>
 -2.4 - Setup Remote Desktop for Non-Administrative Users on Client-1(Windows 11).
 <img width="952" height="872" alt="image" src="https://github.com/user-attachments/assets/3f0fd3c3-02e9-4fb0-908e-bf2fcc01ba00" />
 <p>I enabled Remote Desktop access for domain users on Client‑1 so that non‑administrative accounts can log in remotely. This ensures regular employees can connect to the workstation through the domain, supporting centralized access and testing Active Directory functionality beyond just admin accounts.</p>
 <br>
 <br>
--2.4 - Created additional users and attempted to log into "client-1" with one of the users.
+-3.1 - Created additional users and attempted to log into "client-1" with one of the users.
 <img width="957" height="911" alt="UsersCreated" src="https://github.com/user-attachments/assets/bdea4236-03ac-4d67-813e-b3703ea9f945" />
 <img width="777" height="582" alt="image" src="https://github.com/user-attachments/assets/0a5e40c8-bbd0-46a0-8ef5-8484c5ac381a" />
 <img width="563" height="693" alt="image" src="https://github.com/user-attachments/assets/4802fb87-beaa-466e-ae51-c4a4ef95fc54" />
@@ -116,6 +117,6 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 
 <p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.In the second image, you can see that I'm in the Active Directory Users & Computers, and in the _EMPLOYEES group, you can see the users created. Finally, I randomly picked a user to log into client-1 as a user for that account and it was a success.</p>
 
-- Step 3
-- Step 4
+<h3>Step 4 - Group Policy & Managing Accounts</h3>
+
 
