@@ -108,7 +108,10 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 <p>I enabled Remote Desktop access for domain users on Client‑1 so that non‑administrative accounts can log in remotely. This ensures regular employees can connect to the workstation through the domain, supporting centralized access and testing Active Directory functionality beyond just admin accounts.</p>
 <br>
 <br>
+-2.4 - Created additional users and attempted to log into "client-1" with one of the users.
+<img width="957" height="911" alt="image" src="https://github.com/user-attachments/assets/b66b320e-2114-410a-ad30-748b48b8be1f" />
 
+<p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.</p>
 
 - Step 3
 - Step 4
