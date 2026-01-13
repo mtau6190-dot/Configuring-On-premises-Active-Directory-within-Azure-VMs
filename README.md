@@ -121,7 +121,31 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 -4.1 -Dealing with Account Lockouts
 <img width="1186" height="689" alt="image" src="https://github.com/user-attachments/assets/4ed190b2-36f5-42a8-8ee2-db15230785d9" />
 <p>My test showed that even after multiple failed logins, the account was still accessible once the correct password was entered. This means the Account Lockout Policy is not configured in Active Directory. Without this policy, repeated failed attempts don’t trigger a lockout, leaving accounts vulnerable to brute‑force attacks. Configuring it enforces security by locking accounts after a set number of failed attempts.</p><br>
+
 -4.2 -Configured the domain account Lockout Policy
+<img width="1463" height="852" alt="image" src="https://github.com/user-attachments/assets/f7ac6521-8fdd-4fc4-8fe0-0b96d9bf7dbf" />
+<img width="681" height="170" alt="image" src="https://github.com/user-attachments/assets/d783ea34-fb05-46d7-8b5f-ccdc511d8a2e" />
+
+<p>I logged into DC‑1 and used the Group Policy Management Console to edit the default domain policy. By navigating to the Account Policy settings, I configured the Account Lockout Policy. This ensures that after a set number of failed login attempts, user accounts will be locked, protecting the domain against brute‑force attacks and strengthening overall security.
+I configured the Account Lockout Policy with these settings:
+
+Lockout Duration: 10 minutes → accounts remain locked for 10 minutes before unlocking.
+
+Threshold: 5 invalid attempts → after 5 failed logins, the account is locked.
+
+Administrator lockout enabled → even admin accounts can be locked, increasing security.
+
+Reset counter after 10 minutes → if fewer than 5 failed attempts occur, the counter resets after 10 minutes.
+
+Together, these settings protect against brute‑force attacks while allowing accounts to recover automatically after a short period.</p><br>
+
+-4.3 -Updated the Group Policy by using CMD:
+<img width="907" height="502" alt="image" src="https://github.com/user-attachments/assets/767f3778-abcc-4abf-9996-95aeed19fe02" />
+<p>I ran gpupdate /force on Client‑1 to immediately apply the updated Group Policy settings from the domain. This ensures that the Account Lockout Policy and any other changes made on DC‑1 are enforced without waiting for the next automatic refresh. It’s a crucial step to validate that my security configurations are active and working as intended.</p>
+
+
+
+
 
 
 
