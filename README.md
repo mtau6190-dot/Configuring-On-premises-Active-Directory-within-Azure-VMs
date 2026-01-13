@@ -146,6 +146,13 @@ Together, these settings protect against brute‑force attacks while allowing ac
 
 <p>I ran gpresult /r on DC‑1 to confirm that Group Policy settings—like the Account Lockout Policy—were successfully applied to the user reece_admin. The output shows that the policy was pulled from dc-1.mydomain.com, and the user is located in the _ADMINS OU, verifying that my Group Policy configuration is active and targeting the correct domain objects. This confirms my domain’s security policies are now enforced.</p>
 
+-4.4 -Enabled & Disabled Accounts
+<img width="696" height="180" alt="image" src="https://github.com/user-attachments/assets/f1563217-ab66-4738-b211-e0414003e163" />
+<p>My test confirmed that the Account Lockout Policy is now active. After multiple failed login attempts using the rosaf.nada account, Remote Desktop displayed a lockout warning, preventing access. This proves that the Group Policy settings—especially the lockout threshold and duration—are successfully enforced across the domain, strengthening security against unauthorized access.</p>
+<img width="505" height="670" alt="image" src="https://github.com/user-attachments/assets/a4727e56-0ada-4566-bb31-bab3cef124dc" />
+
+I unlocked the rosaf.nada account in Active Directory after it was locked due to too many failed login attempts. This confirms that my Account Lockout Policy is functioning correctly, and that you—as a domain admin—can manually restore access when needed. It’s a key part of managing user security and ensuring controlled recovery from lockouts.
+
 
 
 
