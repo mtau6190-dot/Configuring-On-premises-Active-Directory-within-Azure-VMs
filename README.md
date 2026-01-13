@@ -109,9 +109,11 @@ Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, en
 <br>
 <br>
 -2.4 - Created additional users and attempted to log into "client-1" with one of the users.
-<img width="957" height="911" alt="image" src="https://github.com/user-attachments/assets/b66b320e-2114-410a-ad30-748b48b8be1f" />
+<img width="957" height="911" alt="UsersCreated" src="https://github.com/user-attachments/assets/bdea4236-03ac-4d67-813e-b3703ea9f945" />
+<img width="777" height="582" alt="image" src="https://github.com/user-attachments/assets/0a5e40c8-bbd0-46a0-8ef5-8484c5ac381a" />
 
-<p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.</p>
+
+<p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.In the second image, you can see that I'm in the Active Directory Users & Computers, and in the _EMPLOYEES group, you can see the users created. Finally, I randomly picked a user to log into client-1 as a user for that account.</p>
 
 - Step 3
 - Step 4
