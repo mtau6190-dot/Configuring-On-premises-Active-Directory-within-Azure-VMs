@@ -142,6 +142,9 @@ Together, these settings protect against brute‑force attacks while allowing ac
 -4.3 -Updated the Group Policy by using CMD:
 <img width="907" height="502" alt="image" src="https://github.com/user-attachments/assets/767f3778-abcc-4abf-9996-95aeed19fe02" />
 <p>I ran gpupdate /force on Client‑1 to immediately apply the updated Group Policy settings from the domain. This ensures that the Account Lockout Policy and any other changes made on DC‑1 are enforced without waiting for the next automatic refresh. It’s a crucial step to validate that my security configurations are active and working as intended.</p>
+<img width="661" height="721" alt="image" src="https://github.com/user-attachments/assets/7418581d-dbcc-4781-813f-ae16f485c338" />
+
+<p>I ran gpresult /r on DC‑1 to confirm that Group Policy settings—like the Account Lockout Policy—were successfully applied to the user reece_admin. The output shows that the policy was pulled from dc-1.mydomain.com, and the user is located in the _ADMINS OU, verifying that my Group Policy configuration is active and targeting the correct domain objects. This confirms my domain’s security policies are now enforced.</p>
 
 
 
