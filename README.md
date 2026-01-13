@@ -151,7 +151,34 @@ Together, these settings protect against brute‑force attacks while allowing ac
 <p>My test confirmed that the Account Lockout Policy is now active. After multiple failed login attempts using the rosaf.nada account, Remote Desktop displayed a lockout warning, preventing access. This proves that the Group Policy settings—especially the lockout threshold and duration—are successfully enforced across the domain, strengthening security against unauthorized access.</p>
 <img width="505" height="670" alt="image" src="https://github.com/user-attachments/assets/a4727e56-0ada-4566-bb31-bab3cef124dc" />
 
-I unlocked the rosaf.nada account in Active Directory after it was locked due to too many failed login attempts. This confirms that my Account Lockout Policy is functioning correctly, and that you—as a domain admin—can manually restore access when needed. It’s a key part of managing user security and ensuring controlled recovery from lockouts.
+I unlocked the rosaf.nada account in Active Directory after it was locked due to too many failed login attempts. This confirms that my Account Lockout Policy is functioning correctly, and that I—as a domain admin—can manually restore access when needed. It’s a key part of managing user security and ensuring controlled recovery from lockouts.<br>
+
+<h3>PROJECT OUTCOME</h3>
+<p>I successfully:
+
+- Built a domain environment with a Domain Controller and client machine.
+
+- Organized resources with OUs and created both standard and admin users.
+
+- Automated account provisioning with PowerShell.
+
+- Configured and enforced Group Policy security settings.
+
+- Validated functionality through login tests, Remote Desktop access, and lockout enforcement.</p>
+
+## Skills Demonstrated
+
+- **Active Directory Administration**: Installed, configured, and promoted a Windows Server to Domain Controller.
+- **Networking & DNS**: Configured static IPs, DNS resolution, and verified connectivity between domain resources.
+- **Organizational Units & User Management**: Created OUs (_EMPLOYEES, _ADMINS, _CLIENTS), added users, and assigned security groups.
+- **Automation with PowerShell**: Automated bulk user creation and OU placement using scripts.
+- **Remote Desktop Configuration**: Enabled domain user access to RDP for centralized workstation management.
+- **Group Policy Management**: Configured and enforced Account Lockout Policy to strengthen domain security.
+- **Troubleshooting & Verification**: Used tools like `ping`, `ipconfig`, `gpupdate`, and `gpresult` to validate setup and policies.
+- **Security & Recovery**: Tested lockout enforcement and manually unlocked accounts in ADUC.
+- **Cloud Infrastructure (Azure)**: Deployed VMs, Virtual Networks, and Resource Groups to simulate on‑premises AD in the cloud.
+- **Documentation & Presentation**: Captured screenshots, explained steps, and structured outcomes for portfolio readiness.
+
 
 
 
