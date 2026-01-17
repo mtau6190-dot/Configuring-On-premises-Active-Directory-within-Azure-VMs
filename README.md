@@ -314,26 +314,109 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <p>Wait for the Installation Progress ->Click "Close"</p>
 <img width="978" height="697" alt="image" src="https://github.com/user-attachments/assets/fde6cb33-3d39-4446-bcc3-f866a9dbf25e" />
 <img width="982" height="708" alt="image" src="https://github.com/user-attachments/assets/d1617ce8-c704-402c-a30f-3780b3a3250c" />
-
 <br>
 
+<h4>SUMMARY</h4>
+<p>Installed Active Directory Domain Services (AD DS) on dc‑1 is essential because it promotes the server to a Domain Controller. This enables centralized authentication, user and group management, and policy enforcement across the network. Without AD DS, client machines cannot join the domain or leverage Active Directory features.</p>
 
-<img width="993" height="708" alt="image" src="https://github.com/user-attachments/assets/28d53c68-a958-442d-b151-2294a900c80c" />
-<img width="1004" height="704" alt="image" src="https://github.com/user-attachments/assets/3bd284a3-2ab7-4033-984a-60f45c6a5342" />
+<h4>2.2 -Promoted the Active Directory Server to the Domain Controller and Created a new Forest<br></h4>
 
+<p>Click on the Flag -> Click "Promote this Server to the Domain Controller" </p>
+<img width="1426" height="755" alt="image" src="https://github.com/user-attachments/assets/eaaf37df-4369-46a1-805c-8494499c3513" />
+<br>
+<p>Check "Add a New Forest" checkbox -> Enter your Root Domain Name "mydomain.com"-> Click "Next" </p>
+<img width="965" height="707" alt="image" src="https://github.com/user-attachments/assets/2ac19e49-2314-45f2-b317-47f88a885b3a" />
+<br>
+<p>Enter your AD Password -> Click "next"</p>
+<img width="965" height="706" alt="image" src="https://github.com/user-attachments/assets/d18fd37a-f097-424f-88ed-d9b55e1dd367" />
+<br>
+<p>Uncheck "DNS Delegation" Checkbox -> Click "Next"</p>
+<img width="960" height="708" alt="image" src="https://github.com/user-attachments/assets/c41b81c0-822c-4569-8882-5d47f3060ed4" />
+<br>
 
+<p>Click "next"</p>
+<img width="969" height="710" alt="image" src="https://github.com/user-attachments/assets/2d9eb802-e73c-471a-95fd-d54acc53cd63" />
+<br>
 
-<img width="1309" height="896" alt="image" src="https://github.com/user-attachments/assets/c3cf7247-33da-4d3a-9265-13643f04686c" />
-<img width="923" height="712" alt="image" src="https://github.com/user-attachments/assets/c2342f01-683c-47af-bd9a-19b32b0707f0" />
+<p>Click "Next"</p>
+<img width="962" height="707" alt="image" src="https://github.com/user-attachments/assets/165e0cc4-6014-4e86-9bb6-a5ab45056d88" />
+<br>
+
+<p>Click "Next"</p>
+<img width="955" height="704" alt="image" src="https://github.com/user-attachments/assets/f44482b1-c900-427d-9fdb-d8fd51320c3c" />
+<br>
+
+<p>Pre-requisites Passed Successfully ->Click "Install"</p>
+<img width="942" height="697" alt="image" src="https://github.com/user-attachments/assets/c9958605-d57d-4bc8-865a-f9d6894060b7" />
+<br>
+
+<p>Installation in Progress</p>
+<img width="952" height="697" alt="image" src="https://github.com/user-attachments/assets/ebda74b7-3f6c-4418-8900-68fb69b596c9" />
+<br>
+
+<p>Successful Installation</p>
+<p>Log in as the domain controller in "dc-1" using my new forest domain "mydomain.com\labUser"</p>
+<img width="1110" height="709" alt="image" src="https://github.com/user-attachments/assets/e1d4500b-3224-46b5-a2e2-9918e81e1e5b" />
+<img width="815" height="473" alt="image" src="https://github.com/user-attachments/assets/08d6843b-476e-4b72-85f0-4e1099fd8bc1" />
+<br>
+<h4>SUMMARY</h4>
 <p>I installed Active Directory on DC‑1 (Windows Server 2022) and promoted it to a Domain Controller by creating a new forest called mydomain.com. This established the domain structure and centralized authentication. After the server restarted, I logged in using the domain account mydomain.com\labUser, confirming that the domain was successfully created and functional.</p>
 
 <br>
-<h4>2.2 - Created an Admin & Normal User Account in Active Directory Users & Computers(ADUC).<br></h4>
-<img width="831" height="572" alt="image" src="https://github.com/user-attachments/assets/fe78d843-fd9e-4768-9013-a4d131a88f0d" />
-<img width="890" height="643" alt="image" src="https://github.com/user-attachments/assets/246bff58-b55f-47bc-800f-6a9e50b7c0ea" />
-<img width="615" height="523" alt="image" src="https://github.com/user-attachments/assets/9c5aa835-610a-4d3e-9ea4-6468d0a30f61" />
-<img width="567" height="693" alt="image" src="https://github.com/user-attachments/assets/3f59c76c-565e-4f52-95c6-d864d380bd02" />
+<h4>2.3 - Create a Domain Admin user within the Domain.<br></h4>
 
+<p>Go to Start->Go to "Windows Adminstrative Tools"->Click on "Active Driectory Users & Computers"</p>
+<img width="812" height="998" alt="image" src="https://github.com/user-attachments/assets/8a071dbb-095e-4729-9a09-1e00048c2033" />
+<br>
+<p>Right-Click on Forest "(mydomain.com)"->Click "New" ->Click "Organizational Unit(OU)</p>
+<img width="949" height="671" alt="image" src="https://github.com/user-attachments/assets/10af94e6-6981-48e9-86fe-ccc762cb8bc0" />
+<br>
+<p>Type _EMPLOYEES -> Click "ok"</p>
+<img width="550" height="474" alt="image" src="https://github.com/user-attachments/assets/96041f66-7747-46f5-8176-d376f772e9a8" />
+<br>
+<p>Right-Click on Forest "(mydomain.com)"->Click "New" ->Click "Organizational Unit(OU)</p> </p>
+<img width="954" height="670" alt="image" src="https://github.com/user-attachments/assets/8ede60e1-5c1e-4ba6-bc1a-de18a74b21d2" />
+<br>
+<p>Type _ADMINS -> Click "ok"</p>
+<img width="550" height="474" alt="image" src="https://github.com/user-attachments/assets/96041f66-7747-46f5-8176-d376f772e9a8" />
+<img width="952" height="672" alt="image" src="https://github.com/user-attachments/assets/60495324-3df7-4a1c-bb70-31800a53843c" />
+<br>
+<p>Right-Click on "_ADMINS"->Select "New" -> Select "User" </p>
+<img width="945" height="677" alt="image" src="https://github.com/user-attachments/assets/8a93b3a8-d753-4102-a1a9-8a3cbc7dad88" />
+<br>
+<p>Fill out the form -> Click "next"</p>
+<img width="548" height="473" alt="image" src="https://github.com/user-attachments/assets/429ed0ef-86c9-4e2c-8f89-f351deb3a8d1" />
+<br>
+<p>Enter New Password & Confirm->Click "Next"</p>
+<img width="546" height="477" alt="image" src="https://github.com/user-attachments/assets/ada757de-d6a3-4efb-951a-38e53c5eca26" />
+<br>
+<p>Click "Finish"</p>
+<img width="546" height="476" alt="image" src="https://github.com/user-attachments/assets/cde62870-7a1d-4f62-8a98-56082d296dee" />
+<br>
+<p>Right-Click on the new User -> Select "Properties"</p>
+<img width="944" height="663" alt="image" src="https://github.com/user-attachments/assets/255370eb-2a25-47ef-95dd-71e975f32193" />
+<br>
+<p>Click "Member of"</p></p>
+<img width="517" height="692" alt="image" src="https://github.com/user-attachments/assets/8db5fcfd-ad41-413a-a782-479574e1221f" />
+<br>
+<p>Click "Add"</p>
+<img width="514" height="696" alt="image" src="https://github.com/user-attachments/assets/777e5d2e-69f0-4310-9ed0-6d3503c87213" />
+<br>
+<p>Type in "Domain Admins" ->Click "Check Names"-> Click "ok"</p>
+<img width="583" height="320" alt="image" src="https://github.com/user-attachments/assets/5e742491-06f9-417c-ad33-15b4fa474ae1" />
+<br>
+<p>Click "Apply" -> Click "Ok"</p>
+<img width="507" height="688" alt="image" src="https://github.com/user-attachments/assets/762a5ed5-8198-41fd-bab6-eb766cd98bcb" />
+<br>
+<p>Log Out -> Sign in as the new Admin User-> Enter your new admin credentials->Click "Ok"-> Click "Yes"</p>
+<img width="817" height="995" alt="image" src="https://github.com/user-attachments/assets/576a0400-c553-4aad-9506-e4161b992477" />
+<img width="562" height="720" alt="image" src="https://github.com/user-attachments/assets/80f5ebbe-5025-4a60-82a9-a2a0bfa2967f" />
+<img width="511" height="487" alt="image" src="https://github.com/user-attachments/assets/8d12b321-954b-4c5a-82c5-adbe94e071d2" />
+<br>
+<p>Successful Login</p>
+<img width="864" height="529" alt="image" src="https://github.com/user-attachments/assets/3f2e9f7f-c02f-4939-b040-083d40b2ef66" />
+<br>
+<h4>SUMMARY</h4>
 <P>I organized Active Directory by creating two OUs: _EMPLOYEES and _ADMINS. Then I added a new user, Reece Walsh with the username reece_admin, and elevated them by adding to the Domain Admins group. Finally, I logged back into DC‑1 using mydomain.com\reece_admin, confirming the account’s admin privileges and making it the primary account for your project.</P>
 
 
