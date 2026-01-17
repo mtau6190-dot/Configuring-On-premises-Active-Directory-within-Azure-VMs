@@ -176,9 +176,41 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 
 <h4>1.5 - Copied "dc-1"s Public IP Address, then logged into "dc-1" via Remote Desktop, and disabled the windows Firewall for testing connectivity.<br></h4>
 
-<img width="1915" height="796" alt="image" src="https://github.com/user-attachments/assets/55886a9b-0974-40a0-804e-bb0ca7129def" />
-<img width="1112" height="647" alt="image" src="https://github.com/user-attachments/assets/46df8be8-17b1-4b9f-bbab-a72cbe91ca70" /><br>
-I used DC‑1’s public IP to connect via Remote Desktop so I could access the server. Once inside, I disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.
+<p>Azure Portal -> Click Virtual Machines -> Copied "dc-1s" Public IP Address</p>
+<img width="1966" height="648" alt="image" src="https://github.com/user-attachments/assets/8d8fbfd3-a8a4-48fd-8e55-e7d505666fbe" />
+<br>
+<p>Click Windows + R -> Click "Ok" to Open Remote Desktop Connection</p>
+<img width="467" height="281" alt="image" src="https://github.com/user-attachments/assets/42fb5d06-22f1-4ce1-b18d-a8a0a663baec" />
+<br>
+<p>Paste the IP Address for "dc-1" -> Click "Connect"</p>
+<img width="1462" height="538" alt="image" src="https://github.com/user-attachments/assets/68ddb3a1-bc07-433e-aca2-4fe57fdcc084" />
+<br>
+<p>Enter Credentials ->Click "ok"</p>
+<img width="583" height="499" alt="image" src="https://github.com/user-attachments/assets/921799fc-8fe1-4db7-8d28-9978a6f5d74f" />
+<br>
+<p>Click "Yes"</p>
+<img width="525" height="497" alt="image" src="https://github.com/user-attachments/assets/a7c926f7-3300-4e66-bf83-34c8a2b13169" />
+<br>
+
+<p>In the "dc-1" VM ->Go to Start Button -> Search + Click "Windows Defender Firewall with Advanced Security</p>
+<img width="958" height="1021" alt="image" src="https://github.com/user-attachments/assets/36638c88-ef45-4369-ae5c-1f242096814b" />
+<br>
+<p>Click "Windows Defender Firewall Properties</p>
+<img width="1222" height="717" alt="image" src="https://github.com/user-attachments/assets/374079c2-ae80-4a63-b7ac-c8a2cad53fab" />
+<br>
+<p>Click Domain Profile -> Click "off"</p>
+<img width="1013" height="529" alt="image" src="https://github.com/user-attachments/assets/44fe5354-904b-4b68-93eb-8822951ccb35" />
+<br>
+<p>Click Private Profile -> Click "off"</p>
+<img width="1015" height="549" alt="image" src="https://github.com/user-attachments/assets/d7b6b04c-39c8-4421-a5ed-e46dce9a489d" />
+<br>
+<p>Click Public Profile -> Click "off" ->Click "Apply" ->CLick "ok"</p>
+<img width="507" height="620" alt="image" src="https://github.com/user-attachments/assets/c7969600-2527-44f9-a300-3a5f727dc8f6" />
+<br>
+<img width="1127" height="682" alt="image" src="https://github.com/user-attachments/assets/0604473a-ab97-4bba-b42b-69870371339a" />
+<br>
+<h4>SUMMARY</h4>
+<p>Successfully disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.</p>
 <br>
 <br>
 <h4>1.6 - Set "client-1"s DNS Settings to "dc-1"s private IP Address</h4>
