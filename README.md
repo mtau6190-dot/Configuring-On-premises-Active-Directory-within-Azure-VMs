@@ -283,6 +283,46 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 
 <h4>2.1 - Installed Active Directory in "dc-1". This VM serves as the Windows Server 2022 and then promoted the Server as the Domain Controller (DC): Set up a new forest as "mydomain.com". Restarted and logged back in as: "mydomain.com\labUser"</h4>
 
+<P>Logged into "dc-1" as the Domain Controller-> Open the Server Manager -> CLick "Add Roles & Features under "Configure this local Server".</P>
+<img width="1440" height="749" alt="image" src="https://github.com/user-attachments/assets/a2004327-4675-4316-a6f3-0934b4585669" />
+<br>
+
+<p>Select "Role-Based or Feature-Based Installation -> Click "Next"</p>
+<img width="1004" height="704" alt="image" src="https://github.com/user-attachments/assets/5a6d45db-a391-4734-91ad-bf184f31f730" />
+<br>
+
+<p>Select "Select a server for the server pool<-> Click "Next"/p>
+<img width="988" height="708" alt="image" src="https://github.com/user-attachments/assets/9c020867-47c1-4dae-ab13-ac800b606d3b" />
+<br>
+
+<p>Click "Active Directory Domain Services -> Click "Add Features" ->Click "Next"</p>
+<img width="1278" height="656" alt="image" src="https://github.com/user-attachments/assets/26726537-1806-4391-bc41-cb139b108a96" />
+<br>
+
+<p>Click "Next</p>
+<img width="991" height="702" alt="image" src="https://github.com/user-attachments/assets/c77857d9-e9a7-4427-a466-ddadd859c86e" />
+<br>
+
+<p>Click "Next"</p>
+<img width="985" height="706" alt="image" src="https://github.com/user-attachments/assets/15a54590-5e93-4ec3-8045-cdce800a97af" />
+<br>
+
+<p>Check "Restart the destination server checkbox" -> Click "Yes" ->Click "Install" </p>
+<img width="1192" height="717" alt="image" src="https://github.com/user-attachments/assets/f525a457-731b-4eb2-91f4-b86e31cb5fda" />
+<br>
+
+<p>Wait for the Installation Progress ->Click "Close"</p>
+<img width="978" height="697" alt="image" src="https://github.com/user-attachments/assets/fde6cb33-3d39-4446-bcc3-f866a9dbf25e" />
+<img width="982" height="708" alt="image" src="https://github.com/user-attachments/assets/d1617ce8-c704-402c-a30f-3780b3a3250c" />
+
+<br>
+
+
+<img width="993" height="708" alt="image" src="https://github.com/user-attachments/assets/28d53c68-a958-442d-b151-2294a900c80c" />
+<img width="1004" height="704" alt="image" src="https://github.com/user-attachments/assets/3bd284a3-2ab7-4033-984a-60f45c6a5342" />
+
+
+
 <img width="1309" height="896" alt="image" src="https://github.com/user-attachments/assets/c3cf7247-33da-4d3a-9265-13643f04686c" />
 <img width="923" height="712" alt="image" src="https://github.com/user-attachments/assets/c2342f01-683c-47af-bd9a-19b32b0707f0" />
 <p>I installed Active Directory on DC‑1 (Windows Server 2022) and promoted it to a Domain Controller by creating a new forest called mydomain.com. This established the domain structure and centralized authentication. After the server restarted, I logged in using the domain account mydomain.com\labUser, confirming that the domain was successfully created and functional.</p>
