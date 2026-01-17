@@ -231,9 +231,21 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <h4>1.7 Client-1 Test Connectivity by Pinging DC-1s Private IP</h4>
 <p>Azure Portal -> Click "Virtual Machines" -> Copied "Client-1"s Public IP Address</p>
 <img width="1999" height="811" alt="image" src="https://github.com/user-attachments/assets/6966f844-0aa3-4bea-a8ac-0e8673c1d01f" />
-
-<p></p>
+<br>
+<p>Click Windows + R -> Click "Ok" to open Remote Desktop Connection</p>
 <img width="462" height="279" alt="image" src="https://github.com/user-attachments/assets/d9368a95-8965-4bef-bd68-5194fafa48c9" />
+<br>
+<p>Paste "client-1"s IP Address -> Click "ok" -> Enter Credentials -> Click "ok"</p>
+<img width="1162" height="497" alt="image" src="https://github.com/user-attachments/assets/dba0070a-2e3e-4e86-a4c2-b781b8b4b78c" />
+<br>
+
+<p>Click "Yes" -> </p>
+<img width="522" height="496" alt="image" src="https://github.com/user-attachments/assets/d98e7997-11a7-420d-8ccc-d4bbd078d664" />
+<br>
+
+<p>Click on "Start Button" -> Type in "cmd" -> </p>
+
+
 
 
 <h4>SUMMARY</h4>
