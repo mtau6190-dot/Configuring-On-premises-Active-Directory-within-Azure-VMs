@@ -73,7 +73,7 @@ By creating the Virtual Network, I can define subnets, IP ranges, and apply secu
 My "AD‑VNet" is the foundation that connects and secures all resources in my Active Directory lab.</p>
 <br>
 
-<h4>1.3 - Created the first VM: Domain Controller VM (Windows Server 22) & named it "dc-1" & also created the Client VM (Windows 11 Pro) & named it "Client-1".<br></h4>
+<h4>1.3 - Created Two  VMs: Windows Server 22 VM as the Domain Controller & Windows 11 VM as the Client</h4>
 <p>Azure Portal -> Click "Virtual Machines"</p> 
 <img width="1397" height="340" alt="image" src="https://github.com/user-attachments/assets/0c2675a7-65c5-405e-9587-15a71fcba573" />
 <br>
@@ -87,10 +87,29 @@ My "AD‑VNet" is the foundation that connects and secures all resources in my A
 <br>
 <p>Resource name "AD-Lab" -> Virtual Name "dc-1" -> Region "Southeast Asia"</p>
 <img width="1056" height="812" alt="image" src="https://github.com/user-attachments/assets/0082c148-6d01-4a38-8011-6d18e7c05755" />
+<br>
+<p>Select Image "Windows Server 2022"</p>
+<img width="992" height="646" alt="image" src="https://github.com/user-attachments/assets/7ccebfb0-77c6-49d5-bff7-617e9eff98af" />
+<br>
+<p>Enter Username -> Set Password & Confirm -> Check the Box to confirm -> Click "Next"</p>
+<img width="1085" height="764" alt="image" src="https://github.com/user-attachments/assets/8377a6e5-de9f-49cc-a0d1-a75017f8bbec" />
+<img width="688" height="275" alt="image" src="https://github.com/user-attachments/assets/f2b0b8b3-615c-4aac-8c2f-766e39a0805e" />
+<br>
 
+<p>Virtual Network Select "AD-VNet" -> Click Review + Create</p>
+<img width="1065" height="731" alt="image" src="https://github.com/user-attachments/assets/5fa7821c-bc2c-4638-9e9f-cf593c94fd86" />
+<br>
 
-dc-1 VM:
+<p>Validation Passed -> Now Click "Create"</p>
+<img width="1030" height="841" alt="image" src="https://github.com/user-attachments/assets/da33c23a-6c60-40e7-8574-16e6dfab0bcb" />
+<br>
+<br>
+
+<p>Windows Server VM (dc-1) Successfully Created</p>
 <img width="1938" height="920" alt="image" src="https://github.com/user-attachments/assets/68e2d74b-9d12-411e-a752-3f928cbe4db7" />
+
+<p>This VM is the foundation. By configuring dc‑1 as the domain controller, I establish the central authority for authentication and resource management. All other machines in the lab (like client PCs or member servers) will join the domain controlled by dc‑1.</p>
+
 client-1 VM:
 <img width="1949" height="936" alt="image" src="https://github.com/user-attachments/assets/ace9c816-c7a2-459b-bb64-6e8b9aa0c5ec" />
 Successfully created two VMs (DC‑1 and Client‑1) in Azure gives me:<br>
