@@ -166,8 +166,13 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <br>
 <p>Check Static -> Click "Save"</p> 
 <img width="723" height="889" alt="image" src="https://github.com/user-attachments/assets/d27aaa44-3033-4822-b370-acbfbf6057f9" />
+<br>
+<p>Successfully set DC‑1’s IP address to static so it remains fixed and reliable.</p>
+<img width="1451" height="764" alt="image" src="https://github.com/user-attachments/assets/ebd624c4-8f7c-427d-a538-9893ee037083" />
+
+
 <h4>SUMMARY</h4>
-<p>Successfully set DC‑1’s IP address to static so it remains fixed and reliable. A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
+<p>A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
 
 <h4>1.5 - Copied "dc-1"s Public IP Address, then logged into "dc-1" via Remote Desktop, and disabled the windows Firewall for testing connectivity.<br></h4>
 
