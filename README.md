@@ -174,7 +174,7 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <h4>SUMMARY</h4>
 <p>A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
 
-<h4>1.5 - Copied "dc-1"s Public IP Address, then logged into "dc-1" via Remote Desktop, and disabled the windows Firewall for testing connectivity.<br></h4>
+<h4>1.5 - Temporarily disabled the windows Firewall for testing connectivity.<br></h4>
 
 <p>Azure Portal -> Click Virtual Machines -> Copied "dc-1s" Public IP Address</p>
 <img width="1966" height="648" alt="image" src="https://github.com/user-attachments/assets/8d8fbfd3-a8a4-48fd-8e55-e7d505666fbe" />
@@ -213,13 +213,33 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <p>Successfully disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.</p>
 <br>
 <br>
-<h4>1.6 - Set "client-1"s DNS Settings to "dc-1"s private IP Address</h4>
-<img width="895" height="766" alt="image" src="https://github.com/user-attachments/assets/aae7f01b-295f-48a3-8fe8-e63049b996c5" />
-<img width="1600" height="687" alt="image" src="https://github.com/user-attachments/assets/a9a4af3b-45dd-4855-837a-5aeb5629c1a5" /><br>
-<img width="936" height="776" alt="image" src="https://github.com/user-attachments/assets/490907a8-f9d1-476c-a7b7-0690d70ca14e" /><br>
-Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, ensuring it uses the Domain Controller for name resolution. After logging into Client‑1 via RDP, I tested connectivity by pinging DC‑1’s private IP. The successful ping confirmed that both VMs are on the same network, DNS is correctly set, and Client‑1 can reliably communicate with DC‑1.<br>
 
-<h4>1.7 - From client-1, I ran the command "ipconfig /all" to check and confirm that client-1s dns is dc-1s private IP Address. Therefore,making this Active Directory preparation a success.</h4>
+<h4>1.6 - Set "client-1"s DNS Settings to "dc-1"s private IP Address</h4>
+<p>Azure Portal -> Click on "Virtual Machines" -> Click "client-1" VM</p>
+<img width="1911" height="675" alt="image" src="https://github.com/user-attachments/assets/66d7476f-c4e7-4aaf-882c-862a9351f241" />
+<br>
+<p>Click "Networking" -> Click "Network Settings" -> Click "Network Interface/IP Configurations </p>
+<img width="1187" height="856" alt="image" src="https://github.com/user-attachments/assets/182f2668-fae0-437a-8317-a56505ec6d42" />
+<br>
+<p>Click "Settings" -> Click "DNS Servers" -> Ckeck "Customs" -> Enter "dc-1"s Private IP Address ->Click "Save"</p>
+<img width="1640" height="828" alt="image" src="https://github.com/user-attachments/assets/c3fff6ca-1355-4b54-96fc-4f162d738b90" />
+<br>
+<p>Successfully saved DNS settings for network interface 'client-1'.</p>
+<img width="578" height="256" alt="image" src="https://github.com/user-attachments/assets/747f87f6-d160-46b0-958e-d0f2f17b4a36" />
+<br>
+
+<h4>1.7 Client-1 Test Connectivity by Pinging DC-1s Private IP</h4>
+<p>Azure Portal -> Click "Virtual Machines" -> Copied "Client-1"s Public IP Address</p>
+<img width="1999" height="811" alt="image" src="https://github.com/user-attachments/assets/6966f844-0aa3-4bea-a8ac-0e8673c1d01f" />
+
+<p></p>
+<img width="462" height="279" alt="image" src="https://github.com/user-attachments/assets/d9368a95-8965-4bef-bd68-5194fafa48c9" />
+
+
+<h4>SUMMARY</h4>
+<p>Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, ensuring it uses the Domain Controller for name resolution.</p>
+
+<h4>1.8 - From client-1, I ran the command "ipconfig /all" to check and confirm that client-1s dns is dc-1s private IP Address. Therefore,making this Active Directory preparation a success.</h4>
 
 <img width="951" height="866" alt="image" src="https://github.com/user-attachments/assets/fd4bc315-717f-4bc9-ac53-901fdf51aac3" /><br>
 <P>Running ipconfig /all on Client‑1 allowed me to view its full network configuration, including the DNS server settings. By confirming that Client‑1’s DNS points to DC‑1’s private IP address, I verified that the client is correctly configured to use the Domain Controller for name resolution. This successful check, combined with the earlier ping test, proves that the network setup and DNS integration are working as intended, completing the Active Directory preparation phase successfully.</P>
