@@ -151,12 +151,21 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 
 <h4>1.4 - Set Domain Controller's NIC Private Address to be Static. <br></h4>
 
-<p>From Dynamic to Static:</p> 
-<br>
-<img width="735" height="867" alt="image" src="https://github.com/user-attachments/assets/6b728d0c-e5ec-40fe-862d-a34a0b8ff721" /></b>
-<br>
-<img width="730" height="862" alt="image" src="https://github.com/user-attachments/assets/2a83104e-ff9b-4a63-a64e-9463876d9a1b" />
+<p>Azure Portal -> Click "Virtual Machines -> Click on "dc-1" VM</p>
+<img width="1919" height="712" alt="image" src="https://github.com/user-attachments/assets/a718b0fe-a000-4e21-bebb-ccea66019f93" />
 
+<p>Click on "Netwroking" -> Click "Network Settings" -> Click on "Network Interface/IP Configuration</p>
+<img width="1231" height="861" alt="image" src="https://github.com/user-attachments/assets/f3810bdb-3500-49ec-9d48-e119721f5126" />
+
+<p>Click Settings -> Click IP Configurations -> Click ipconfig1</p>
+<img width="1454" height="775" alt="image" src="https://github.com/user-attachments/assets/bda9a803-8afd-4b90-a756-88337d2b3589" />
+<br>
+<br>
+<p>Uncheck Dynamic</p> 
+<img width="753" height="886" alt="image" src="https://github.com/user-attachments/assets/fcb84c9e-a0a0-4717-bd12-151489ce6345" />
+<br>
+<p>Check Static -> Click "Save"</p> 
+<img width="723" height="889" alt="image" src="https://github.com/user-attachments/assets/d27aaa44-3033-4822-b370-acbfbf6057f9" />
 <h4>SUMMARY</h4>
 <p>Successfully set DC‑1’s IP address to static so it remains fixed and reliable. A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
 
