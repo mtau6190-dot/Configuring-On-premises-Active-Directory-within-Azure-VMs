@@ -74,6 +74,7 @@ My "AD‑VNet" is the foundation that connects and secures all resources in my A
 <br>
 
 <h4>1.3 - Created Two  VMs: Windows Server 22 VM as the Domain Controller & Windows 11 VM as the Client</h4>
+
 <p>Azure Portal -> Click "Virtual Machines"</p> 
 <img width="1397" height="340" alt="image" src="https://github.com/user-attachments/assets/0c2675a7-65c5-405e-9587-15a71fcba573" />
 <br>
@@ -110,7 +111,32 @@ My "AD‑VNet" is the foundation that connects and secures all resources in my A
 
 <p>This VM is the foundation. By configuring dc‑1 as the domain controller, I establish the central authority for authentication and resource management. All other machines in the lab (like client PCs or member servers) will join the domain controlled by dc‑1.</p>
 
-client-1 VM:
+<p>Azure Portal -> Click "Virtual Machines"</p> 
+<img width="1419" height="353" alt="image" src="https://github.com/user-attachments/assets/0571a318-5de5-4763-a30f-c210838a88c0" />
+
+<p>Click "Create"</p> 
+<img width="1956" height="642" alt="image" src="https://github.com/user-attachments/assets/2c92177b-3b5d-495b-87f4-353f65bc4da6" />
+
+<p>Click Virtual Machine</p>
+<img width="453" height="644" alt="image" src="https://github.com/user-attachments/assets/d562a27e-75c2-4406-9f3f-464253612db2" />
+
+<p>Resource name "AD-Lab" -> Virtual Name "client-1" -> Region "Southeast Asia"</p>
+<img width="1043" height="785" alt="image" src="https://github.com/user-attachments/assets/26b4c0ac-12fc-41a0-b3b9-50d10411ecf0" />
+<br>
+<p>Select Image "Windows 11 Pro" -> Enter Username -> Set Password & Confirm -> </p>
+<img width="995" height="660" alt="image" src="https://github.com/user-attachments/assets/b799bff7-20c6-4cf8-ae82-d4a498419cac" />
+
+<p>Check the Box to confirm -> Click "Next"</p>
+<img width="631" height="303" alt="image" src="https://github.com/user-attachments/assets/797582a8-9ecb-4d93-9945-2ff113377d3d" />
+
+<p>Virtual Network Select "AD-VNet" -> Click Review + Create</p>
+<img width="1009" height="732" alt="image" src="https://github.com/user-attachments/assets/923c1284-0e28-434b-b9c4-ab3c3a6e8ae2" />
+
+<p>Validation Passed -> Now Click "Create"</p>
+<img width="979" height="842" alt="image" src="https://github.com/user-attachments/assets/f4c45c00-916e-415b-9000-a9ee53401dca" />
+<br>
+<br>
+<p>Windows 11 VM (client-1) Successfully Created</p>
 <img width="1949" height="936" alt="image" src="https://github.com/user-attachments/assets/ace9c816-c7a2-459b-bb64-6e8b9aa0c5ec" />
 Successfully created two VMs (DC‑1 and Client‑1) in Azure gives me:<br>
 Domain Controller (DC‑1): Runs Windows Server, provides Active Directory, DNS, and authentication services.<br>
