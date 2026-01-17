@@ -281,7 +281,7 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <h3>Step 2 - Deployed Active Directory</h3>
 <h4>PART 1</h4>
 
-<h4>2.1 - Installed Active Directory in "dc-1". This VM serves as the Windows Server 2022 and then promoted the Server as the Domain Controller (DC): Set up a new forest as "mydomain.com". Restarted and logged back in as: "mydomain.com\labUser"</h4>
+<h4>2.1 - Installed Active Directory in "dc-1" (Windows Server 2022)</h4>
 
 <P>Logged into "dc-1" as the Domain Controller-> Open the Server Manager -> CLick "Add Roles & Features under "Configure this local Server".</P>
 <img width="1440" height="749" alt="image" src="https://github.com/user-attachments/assets/a2004327-4675-4316-a6f3-0934b4585669" />
