@@ -31,47 +31,63 @@ Step 4: Created Group Policy and Managed Accoounts<br>
 <h3>Step 1 - Prepared the Active Directory Infrastructure in Azure Environment</h3><br/>
  
 <h4>1.1 - Created a Resource Group in Azure & named it "AD-Lab"</h4>
-  
-  <img width="1908" height="353" alt="image" src="https://github.com/user-attachments/assets/74542719-c1c0-4cf2-8b90-8439a27972c1" />
   <p>Azure Portal -> Click "Resource Groups"</p>
-
-  <img width="1919" height="800" alt="image" src="https://github.com/user-attachments/assets/4ccbc846-814c-4e27-9190-5c6c2caa8021" />
+  <img width="1908" height="353" alt="image" src="https://github.com/user-attachments/assets/74542719-c1c0-4cf2-8b90-8439a27972c1" />
+  
   <p>Click "Create"</p>
-
-  <img width="1075" height="871" alt="image" src="https://github.com/user-attachments/assets/049acc0b-9206-4dce-95d2-716b8d550722" />
+  <img width="1919" height="800" alt="image" src="https://github.com/user-attachments/assets/4ccbc846-814c-4e27-9190-5c6c2caa8021" /><br>
+  <br>
+  
   <p>Resource Group name "AD-Lab" -> Select region "Southeast Asia" -> Click Review + Create</p>
-
+  <img width="1075" height="871" alt="image" src="https://github.com/user-attachments/assets/049acc0b-9206-4dce-95d2-716b8d550722" />
+  <br>
+  
+  <p>The filled out form -> Click Create</p>
   <img width="721" height="867" alt="image" src="https://github.com/user-attachments/assets/4250750c-dd45-44bc-8841-a869959bc1d0" />
-  <p>The filled out form -> Click Create</p>  
-
+  <br>
+  <br>
+  Successfully Created a Resource Group. 
   <img width="1912" height="676" alt="image" src="https://github.com/user-attachments/assets/b662c551-3f43-49a1-928f-78d9c11913fb" />
-Successfully Created a Resource Group. A resource group is like a container that holds related resources (VMs, networks, storage, etc.) for a project. It is easier to organize, secure, manage, and clean up.
+  A resource group is like a container that holds related resources (VMs, networks, storage, etc.) for a project. It is easier to organize, secure, manage, and clean up.
 <br>
 <br>
 
 <h4>1.2 - Created a Virtual Network & Subnet</h4>
-  
+<p>Azure Portal -> Click "Virtual Networks"</p> 
 <img width="1383" height="306" alt="image" src="https://github.com/user-attachments/assets/786bc252-e11b-4c7b-833a-3965b35e9997" />
- <p>Azure Portal -> Click "Virtual Networks"</p>
  
-<img width="1944" height="600" alt="image" src="https://github.com/user-attachments/assets/1cc4a79d-55af-4736-bb42-51964a745caf" />
 <p>Click "Create"</p> 
+<img width="1944" height="600" alt="image" src="https://github.com/user-attachments/assets/1cc4a79d-55af-4736-bb42-51964a745caf" />
 
-<img width="1030" height="867" alt="image" src="https://github.com/user-attachments/assets/51b4964a-848c-4e90-b4dc-4b25d4a89624" />
 <p>Virtual Network name "AD-VNet" -> Resource Group Name Select "AD-Lab" Region "Southeast Asia" -> Click Review + Create</p>
+<img width="1030" height="867" alt="image" src="https://github.com/user-attachments/assets/51b4964a-848c-4e90-b4dc-4b25d4a89624" />
 
-<img width="768" height="903" alt="image" src="https://github.com/user-attachments/assets/d9cf1f97-ce22-4f7a-b3e2-7c05fa7b6669" />
 <p>The filled out form -> Click Create</p>  
+<img width="768" height="903" alt="image" src="https://github.com/user-attachments/assets/d9cf1f97-ce22-4f7a-b3e2-7c05fa7b6669" />
 
+<p>Created a Virtual Network (VNet) in Azure and named it "AD-VNet". It is a private network for my resources.</p>
 <img width="1541" height="711" alt="image" src="https://github.com/user-attachments/assets/de7331a5-f9be-4794-ae2f-62c078dfde2b" />
-<p>Created a Virtual Network (VNet) in Azure and named it "AD-VNet". It is a private network for my resources.
-This Virtual Network will keep my VMs and services secure from the public internet and allows the VMs to talk to each other privately.
+
+<p>This Virtual Network will keep my VMs and services secure from the public internet and allows the VMs to talk to each other privately.
 By creating the Virtual Network, I can define subnets, IP ranges, and apply security rules (NSGs).
 My "AD‑VNet" is the foundation that connects and secures all resources in my Active Directory lab.</p>
 <br>
+
+<h4>1.3 - Created the first VM: Domain Controller VM (Windows Server 22) & named it "dc-1" & also created the Client VM (Windows 11 Pro) & named it "Client-1".<br></h4>
+<p>Azure Portal -> Click "Virtual Machines"</p> 
+<img width="1397" height="340" alt="image" src="https://github.com/user-attachments/assets/0c2675a7-65c5-405e-9587-15a71fcba573" />
+<br>
+<p>Click "Create"</p> 
+<img width="1926" height="591" alt="image" src="https://github.com/user-attachments/assets/74b2ce61-7836-4395-afb4-61d98e274d35" />
 <br>
 
-<h4>1.3 - Created the Domain Controller VM (Windows Server 22) & named it "dc-1" & also created the Client VM (Windows 11 Pro) & named it "Client-1".<br></h4>
+<p>Click Virtual Machine</p>
+<img width="632" height="680" alt="image" src="https://github.com/user-attachments/assets/b787bf03-4629-4f9c-8410-6b5dc98e5a8f" />
+<br>
+<br>
+<p>Resource name "AD-Lab" -> Virtual Name "dc-1" -> Region "Southeast Asia"</p>
+<img width="1056" height="812" alt="image" src="https://github.com/user-attachments/assets/0082c148-6d01-4a38-8011-6d18e7c05755" />
+
 
 dc-1 VM:
 <img width="1938" height="920" alt="image" src="https://github.com/user-attachments/assets/68e2d74b-9d12-411e-a752-3f928cbe4db7" />
