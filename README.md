@@ -48,6 +48,7 @@ Step 4: Created Group Policy and Managed Accoounts<br>
   <br>
   Successfully Created a Resource Group. 
   <img width="1912" height="676" alt="image" src="https://github.com/user-attachments/assets/b662c551-3f43-49a1-928f-78d9c11913fb" />
+  <h4>SUMMARY</h4>
   A resource group is like a container that holds related resources (VMs, networks, storage, etc.) for a project. It is easier to organize, secure, manage, and clean up.
 <br>
 <br>
@@ -68,6 +69,7 @@ Step 4: Created Group Policy and Managed Accoounts<br>
 <p>Created a Virtual Network (VNet) in Azure and named it "AD-VNet". It is a private network for my resources.</p>
 <img width="1541" height="711" alt="image" src="https://github.com/user-attachments/assets/de7331a5-f9be-4794-ae2f-62c078dfde2b" />
 
+<h4>SUMMARY</h4>
 <p>This Virtual Network will keep my VMs and services secure from the public internet and allows the VMs to talk to each other privately.
 By creating the Virtual Network, I can define subnets, IP ranges, and apply security rules (NSGs).
 My "AD‑VNet" is the foundation that connects and secures all resources in my Active Directory lab.</p>
@@ -138,6 +140,8 @@ My "AD‑VNet" is the foundation that connects and secures all resources in my A
 <br>
 <p>Windows 11 VM (client-1) Successfully Created</p>
 <img width="1949" height="936" alt="image" src="https://github.com/user-attachments/assets/ace9c816-c7a2-459b-bb64-6e8b9aa0c5ec" />
+
+<h4>SUMMARY</h4>
 Successfully created two VMs (DC‑1 and Client‑1) in Azure gives me:<br>
 Domain Controller (DC‑1): Runs Windows Server, provides Active Directory, DNS, and authentication services.<br>
 Client‑1: Runs Windows 10, acts as a workstation to join and test the domain.<br>
@@ -147,10 +151,13 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 
 <h4>1.4 - Set Domain Controller's NIC Private Address to be Static. <br></h4>
 
-From Dynamic to Static: <br>
+<p>From Dynamic to Static:</p> 
+<br>
 <img width="735" height="867" alt="image" src="https://github.com/user-attachments/assets/6b728d0c-e5ec-40fe-862d-a34a0b8ff721" /></b>
 <br>
 <img width="730" height="862" alt="image" src="https://github.com/user-attachments/assets/2a83104e-ff9b-4a63-a64e-9463876d9a1b" />
+
+<h4>SUMMARY</h4>
 <p>Successfully set DC‑1’s IP address to static so it remains fixed and reliable. A Domain Controller must always be reachable at the same address because client machines depend on it for DNS resolution and authentication. If the IP were dynamic, it could change after a restart, breaking connectivity and causing domain join failures. By making it static, I ensure stability, consistency, and proper functioning of my Active Directory environment.</p><br>
 
 <h4>1.5 - Copied "dc-1"s Public IP Address, then logged into "dc-1" via Remote Desktop, and disabled the windows Firewall for testing connectivity.<br></h4>
