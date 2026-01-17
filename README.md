@@ -209,6 +209,7 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <br>
 <img width="1127" height="682" alt="image" src="https://github.com/user-attachments/assets/0604473a-ab97-4bba-b42b-69870371339a" />
 <br>
+
 <h4>SUMMARY</h4>
 <p>Successfully disabled the Windows Firewall temporarily to ensure that network traffic (like ping and DNS requests) could pass through without being blocked. This step is only for testing connectivity between my VMs; later, the firewall should be re‑enabled with proper rules for security.</p>
 <br>
@@ -228,6 +229,9 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <img width="578" height="256" alt="image" src="https://github.com/user-attachments/assets/747f87f6-d160-46b0-958e-d0f2f17b4a36" />
 <br>
 
+<h4>SUMMARY</h4>
+<p>Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, ensuring it uses the Domain Controller for name resolution.</p>
+
 <h4>1.7 Client-1 Test Connectivity by Pinging DC-1s Private IP</h4>
 <p>Azure Portal -> Click "Virtual Machines" -> Copied "Client-1"s Public IP Address</p>
 <img width="1999" height="811" alt="image" src="https://github.com/user-attachments/assets/6966f844-0aa3-4bea-a8ac-0e8673c1d01f" />
@@ -243,17 +247,35 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <img width="522" height="496" alt="image" src="https://github.com/user-attachments/assets/d98e7997-11a7-420d-8ccc-d4bbd078d664" />
 <br>
 
-<p>Click on "Start Button" -> Type in "cmd" -> </p>
+<p>Click on "Start Button" -> Type in "cmd" ->Click "cmd" to open</p>
+<img width="971" height="903" alt="image" src="https://github.com/user-attachments/assets/792fa6f9-7d0e-4b08-ae8d-08e0aad4a64b" />
+<br>
 
-
-
+<p>Type "ping 10.0.0.4" ->Click "enter"</p>
+<img width="831" height="906" alt="image" src="https://github.com/user-attachments/assets/53a758d2-45cf-44b4-a1c4-2b9e6fdbae55" />
 
 <h4>SUMMARY</h4>
-<p>Successfully configured Client‑1’s DNS to point to DC‑1’s private IP, ensuring it uses the Domain Controller for name resolution.</p>
+<P>This confirms that Client‑1 can reach DC‑1 over the private Azure network. By pinging DC‑1’s private IP (10.0.0.4), we verify network connectivity between the client and the domain controller. This is critical because Active Directory requires reliable communication with the domain controller for authentication, DNS resolution, and domain join operations. A successful ping ensures the environment is correctly configured and ready for domain integration.</P>
+<br>
 
-<h4>1.8 - From client-1, I ran the command "ipconfig /all" to check and confirm that client-1s dns is dc-1s private IP Address. Therefore,making this Active Directory preparation a success.</h4>
+<h4>Further confirmation by running the ipconfig /all on "client-1" VM.</h4>
 
-<img width="951" height="866" alt="image" src="https://github.com/user-attachments/assets/fd4bc315-717f-4bc9-ac53-901fdf51aac3" /><br>
+<P>Restart Client-1 in the Azure Portal</P>
+<img width="1752" height="642" alt="image" src="https://github.com/user-attachments/assets/809097c8-87c3-4135-abd1-2a08a4bd9c5d" />
+<img width="593" height="131" alt="image" src="https://github.com/user-attachments/assets/90673a42-c733-47f1-9723-02d0d87a8b20" />
+<br>
+<p>Click Windows + R -> Click "Ok" to open Remote Desktop Connection</p>
+<img width="462" height="279" alt="image" src="https://github.com/user-attachments/assets/d9368a95-8965-4bef-bd68-5194fafa48c9" />
+<br>
+<p>Paste "client-1"s IP Address -> Click "ok" -> Enter Credentials -> Click "ok"</p>
+<img width="1162" height="497" alt="image" src="https://github.com/user-attachments/assets/dba0070a-2e3e-4e86-a4c2-b781b8b4b78c" />
+<br>
+<p>On "client-1" -> Go to start button -> type in "cmd" -> Click on "cmd"</p>
+<img width="813" height="850" alt="image" src="https://github.com/user-attachments/assets/a7a917cb-b90b-4c8d-857b-a4929a6c0988" />
+<br>
+<p>Type ipconfig /all -> Click "enter"</p>
+<img width="1478" height="797" alt="image" src="https://github.com/user-attachments/assets/d9ec0da9-b444-4c78-9650-39f79b9ecfc4" />
+
 <P>Running ipconfig /all on Client‑1 allowed me to view its full network configuration, including the DNS server settings. By confirming that Client‑1’s DNS points to DC‑1’s private IP address, I verified that the client is correctly configured to use the Domain Controller for name resolution. This successful check, combined with the earlier ping test, proves that the network setup and DNS integration are working as intended, completing the Active Directory preparation phase successfully.</P>
 
 <h3>Step 2 - Deployed Active Directory</h3>
