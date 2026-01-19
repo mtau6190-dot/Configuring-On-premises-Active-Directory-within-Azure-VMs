@@ -493,7 +493,7 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <img width="625" height="354" alt="image" src="https://github.com/user-attachments/assets/1515fa73-b71d-4d89-9be4-c0c773f94583" />
 <br>
 <p>Click "Ok"</p>
-<img width="500" height="410" alt="image" src="https://github.com/user-attachments/assets/669371b3-ac1c-438d-b166-889790d7a75e" />
+<img width="505" height="415" alt="image" src="https://github.com/user-attachments/assets/9ed8ffa3-4e78-4a8c-8622-fc99d3eb2e46" />
 <br>
 <h4>SUMMARY</h4>
 <p>Configured Remote Desktop for non‑administrative domain users on Client‑1 ensures secure remote access while maintaining least‑privilege principles. By adding domain users to the Remote Desktop Users group, they can connect remotely without requiring administrative rights, confirming proper domain integration and controlled access management.</p>
