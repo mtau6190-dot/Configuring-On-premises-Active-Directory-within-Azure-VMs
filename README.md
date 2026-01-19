@@ -501,15 +501,8 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 
 <h3>Step 3 - Created Users with Powershell</h3>
 
-<img width="952" height="872" alt="image" src="https://github.com/user-attachments/assets/3f0fd3c3-02e9-4fb0-908e-bf2fcc01ba00" />
-<p>I enabled Remote Desktop access for domain users on Client‑1 so that non‑administrative accounts can log in remotely. This ensures regular employees can connect to the workstation through the domain, supporting centralized access and testing Active Directory functionality beyond just admin accounts.</p>
-<br>
-<br>
-<h4>3.2 - Created additional users and attempted to log into "client-1" with one of the users.</h4>
-<img width="957" height="911" alt="UsersCreated" src="https://github.com/user-attachments/assets/bdea4236-03ac-4d67-813e-b3703ea9f945" />
-<img width="777" height="582" alt="image" src="https://github.com/user-attachments/assets/0a5e40c8-bbd0-46a0-8ef5-8484c5ac381a" />
-<img width="563" height="693" alt="image" src="https://github.com/user-attachments/assets/4802fb87-beaa-466e-ae51-c4a4ef95fc54" />
-<img width="772" height="580" alt="image" src="https://github.com/user-attachments/assets/411cd525-c14c-4414-90ac-6f38f47c6d24" />
+<h4>3.1 Create Users and Test Login on Client‑1</h4>
+<p></p>
 
 <p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.In the second image, you can see that I'm in the Active Directory Users & Computers, and in the _EMPLOYEES group, you can see the users created. Finally, I randomly picked a user to log into client-1 as a user for that account and it was a success.</p>
 
