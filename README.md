@@ -624,9 +624,25 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <img width="484" height="780" alt="image" src="https://github.com/user-attachments/assets/69d68206-6c3f-49bb-a379-c31d596a6e1b" />
 <br>
 <p>Type "cmd" -> Click "ok"</p>
-![Uploading image.png…]()
+<img width="460" height="283" alt="image" src="https://github.com/user-attachments/assets/78a073f5-ffc4-4a00-bda3-70319319afd8" />
 <br>
 <p>Type "gpupdate /force-> Click "Enter"</p>
+<img width="1481" height="769" alt="image" src="https://github.com/user-attachments/assets/3e8fe806-0b9a-410c-a123-370edd030b2c" />
+<br>
+<p>Go to Start -> type "cmd" -> Right-click -> Click on Administrator Open "open" </p>
+<img width="995" height="946" alt="image" src="https://github.com/user-attachments/assets/5dc560de-1e25-4fe6-97f6-81686eebf2d9" />
+<br>
+<p>Click "Yes"</p>
+<img width="578" height="479" alt="image" src="https://github.com/user-attachments/assets/4e608852-5137-4619-b6c0-b15c01cf06c3" />
+<br>
+<p>Type "gpresult /r"</p>
+<img width="1486" height="771" alt="image" src="https://github.com/user-attachments/assets/0e16df9b-6096-4f55-984c-cac44a74f016" />
+<br>
+<p>Scroll Down to confirm the Group Policy was applied</p>
+<img width="1109" height="648" alt="image" src="https://github.com/user-attachments/assets/a492d319-5664-4c21-a7a6-06c5cc789017" />
+<br>
+
+
 
 
 
