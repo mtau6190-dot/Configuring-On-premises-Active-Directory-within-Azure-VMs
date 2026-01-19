@@ -421,6 +421,39 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 
 
 <h4>2.3 - Joined Client-1 to my domain (mydomain.com).</h4>
+<p>From the Azure Protal -> Go to Virtual Machines-> Copy the "client-1" Public IP Address, and paste it on Remote Desktop Connection ->Click "Connect"</p>
+<img width="1915" height="718" alt="image" src="https://github.com/user-attachments/assets/f5460478-c22d-4df8-ba3b-bd3913b68fea" />
+<br>
+<p>Enter "client-1"s original local Admin Credentials-> Click "Ok"</p>
+<img width="569" height="556" alt="image" src="https://github.com/user-attachments/assets/18d3306f-8384-48a7-acbe-66159a0a1425" />
+<br>
+<p>Click "Yes"</p>
+<img width="520" height="485" alt="image" src="https://github.com/user-attachments/assets/21d8c8f8-6f79-4269-aae6-0f9ae9e18b27" />
+<br>
+<p>Go to Start->Type "System" -> Click on System -></p>
+<img width="968" height="863" alt="image" src="https://github.com/user-attachments/assets/16432237-123a-454f-882e-df7b95034737" />
+<br>
+<p>Click on "Advanced System Settings" -> Under "Computer Name" -> Click on "Change"</p>
+<img width="1287" height="653" alt="image" src="https://github.com/user-attachments/assets/438dd10c-d262-4ebf-9ada-84992766da60" />
+<p>Check the "Domain" Checkbox -> Type the Domain Name "mydomain.com"-> Click "Ok"</p>
+<img width="552" height="580" alt="image" src="https://github.com/user-attachments/assets/f40bdeba-91ae-4079-bc41-54d13cff01e2" />
+<br>
+<p>Enter the "dc-1" Domain Controller credentails when it pops up -> Click "Ok". This pop up confirms that it found the Domain that was created. So we are good to go. </p>
+<img width="568" height="511" alt="image" src="https://github.com/user-attachments/assets/0e5cdb91-69b1-455f-978e-bf9ed9d2830a" />
+<br>
+<p>Click "Ok"</p>
+<img width="374" height="215" alt="image" src="https://github.com/user-attachments/assets/7f3ca0d8-6b74-4005-8a46-958277618242" />
+<br>
+<p>Click "Ok"</p>
+<img width="451" height="238" alt="image" src="https://github.com/user-attachments/assets/a0921f68-e193-4aa1-bf55-190336539876" />
+<br>
+<img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/e13f6005-2b82-40e4-ab33-d42832468ce4" />
+<p>Click "Yes" to Restart the "client-1" VM.</p>
+<img width="452" height="225" alt="image" src="https://github.com/user-attachments/assets/c455c2cf-ec9c-4489-9faf-7d5afa32cc40" />
+<br>
+
+
+
 <img width="940" height="841" alt="image" src="https://github.com/user-attachments/assets/a54c0f0d-82b7-4273-a465-6df2f736094a" />
 <img width="400" height="247" alt="image" src="https://github.com/user-attachments/assets/81a1b061-6bc0-4ea5-922e-87d2747cf3b4" />
 <img width="957" height="938" alt="image" src="https://github.com/user-attachments/assets/f38985c4-208e-48d9-b738-1317880201df" />
