@@ -510,7 +510,42 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <br>
 <p>Click "Yes"</p>
 <img width="523" height="501" alt="image" src="https://github.com/user-attachments/assets/81677b04-bbf4-42b0-a37a-91dccb87f572" />
-<br></p>
+<br>
+<p>Go to start-> Type "Powershell" -> Right-Click on "Windows Powershell ISE"->Click on "Run as Administrator"</p>
+<img width="1041" height="965" alt="image" src="https://github.com/user-attachments/assets/fd828db2-6f5e-44ef-b095-17eeee6e1ef2" />
+<br>
+<p>Click "Yes"</p>
+<img width="567" height="397" alt="image" src="https://github.com/user-attachments/assets/9de490d4-26c1-4831-b909-62b1aef414d0" />
+<br>
+<p>Click on "File"-> Click "New"</p>
+<img width="1714" height="941" alt="image" src="https://github.com/user-attachments/assets/cbe629cf-a312-45de-8903-a60698e0c4c6" />
+<br>
+<p>Click on "File" again -> Click on "Save as"</p>
+<img width="1719" height="894" alt="image" src="https://github.com/user-attachments/assets/77eea8e8-f210-4d69-8d86-08741372a1d2" />
+<br>
+<p>Type the file name "Script-Users" (You can name the file whatever you want)-> Click "Desktop" for saved Path -> Click "Save"</p>
+<img width="949" height="593" alt="image" src="https://github.com/user-attachments/assets/3c82f5cd-d503-4bb1-b69f-2153fea49c2a" />
+<br>
+<p>Write a script that creates users</p>
+<img width="1270" height="897" alt="image" src="https://github.com/user-attachments/assets/d98b3993-6f4b-41fa-9f0c-9b2af9dcff64" />
+<br>
+<p>Notice the Users all have the Password "Password1" and "10,000" of them will be created using this script.</p>
+<img width="1021" height="378" alt="image" src="https://github.com/user-attachments/assets/a0603645-b338-4fec-8709-77e16d93be99" />
+<br>
+<p>Scroll down, and you will notice the "path" where the users will be created and gets stored in "_EMPLOYEES" Organizational Unit (OU) -> Click on "Run" to run the script.</p>
+<img width="1708" height="934" alt="image" src="https://github.com/user-attachments/assets/cd94afca-2bc0-475f-a07d-4cf0b652973e" />
+<img width="1697" height="797" alt="image" src="https://github.com/user-attachments/assets/21375c8e-3265-439c-9154-146c77f49f65" />
+<br>
+<p>This pop message will show. Click "Yes"</p>
+<img width="568" height="142" alt="image" src="https://github.com/user-attachments/assets/2697fb83-6bfb-4f58-8833-3b006c68299c" />
+<br>
+<p>The Users are being created now. Notice the user "kade.folo" user, I will later verify and confirm the user in Active Directory Computers & Users</p>
+<img width="1018" height="897" alt="image" src="https://github.com/user-attachments/assets/896ff288-aae8-4d95-8e8e-6b915c33a656" />
+<br>
+
+
+
+
 
 <p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.In the second image, you can see that I'm in the Active Directory Users & Computers, and in the _EMPLOYEES group, you can see the users created. Finally, I randomly picked a user to log into client-1 as a user for that account and it was a success.</p>
 
