@@ -641,11 +641,35 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <p>Scroll Down to confirm the Group Policy was applied</p>
 <img width="1109" height="648" alt="image" src="https://github.com/user-attachments/assets/a492d319-5664-4c21-a7a6-06c5cc789017" />
 <br>
-
-
-
-
-
+<p>Now logged in as the user "kade.folo" and attempted to log in more than 5 times to test if we get locked out.</p>
+<img width="566" height="642" alt="image" src="https://github.com/user-attachments/assets/418bfe42-b071-4700-ab5a-aff92c7f8657" />
+<br>
+<p>This pop up message is letting us know that this account is locked out. Our Policy we set earlier did work -> Click "Ok"</p>
+<img width="701" height="200" alt="image" src="https://github.com/user-attachments/assets/5ac63e27-5cb1-4899-91c9-fd65f2357058" />
+<br>
+<p>Go back to the Domain Controller in which we logged in earlier -> Go to Start -> Type "Active Directory Users & Computers" -> Click on it</p>
+<img width="1045" height="980" alt="image" src="https://github.com/user-attachments/assets/09cc57b7-f1dc-40ed-9939-10a073bce528" />
+<br>
+<p>Right-click "mydomain.com" -> CLick "find". We are looking for the User "kade.folo". The user is now locked</p>
+<img width="947" height="663" alt="image" src="https://github.com/user-attachments/assets/686f65a0-8c51-476e-b28a-20dbef83ec60" />
+<br>
+<p>Type the User's name "kade.folo" -> Click "Find Now"-> Double Click on the User</p>
+<img width="653" height="411" alt="image" src="https://github.com/user-attachments/assets/4fb158f3-b0e3-4212-843e-1b6bfa36c7b0" />
+<br>
+<p>Click on Account to observe the User's Account Details. You will notice that the account locked Out</p>
+<img width="521" height="687" alt="image" src="https://github.com/user-attachments/assets/a74b9fba-a960-4dd1-94a8-586d41e6dc66" />
+<br>
+<p>Go back to "client-1" to login as "kade.folo" User ->Enter credentials with right Password. -> Click "Ok" ->Click "Yes"</p>
+<img width="558" height="701" alt="image" src="https://github.com/user-attachments/assets/c7fee66c-c829-4e69-bc6a-6836e3aa79fa" />
+<br>
+<p>Click "Yes"</p>
+<img width="526" height="502" alt="image" src="https://github.com/user-attachments/assets/e25b2d04-1217-48e3-968e-7510a71371d4" />
+<br>
+<p>Logged back in Successfully</p>
+<img width="609" height="416" alt="image" src="https://github.com/user-attachments/assets/0adf8bb4-6e5a-4ae0-9c01-4a1fcf46d95d" />
+<br>
+<h4>SUMMARY</h4>
+<p>Implemented and tested account lockout policies through Group Policy strengthens domain security by preventing unauthorized access attempts. The successful lockout of the user account confirmed that the policy was applied correctly, while unlocking the account in ADUC demonstrated secure recovery and centralized management.</p>
 
 
 
