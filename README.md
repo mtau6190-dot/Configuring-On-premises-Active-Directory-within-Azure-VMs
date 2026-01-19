@@ -258,7 +258,7 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <P>This confirms that Client‑1 can reach DC‑1 over the private Azure network. By pinging DC‑1’s private IP (10.0.0.4), we verify network connectivity between the client and the domain controller. This is critical because Active Directory requires reliable communication with the domain controller for authentication, DNS resolution, and domain join operations. A successful ping ensures the environment is correctly configured and ready for domain integration.</P>
 <br>
 
-<h4>Further confirmation by running the ipconfig /all on "client-1" VM.</h4>
+<h4>1.8 Further confirmation by running the ipconfig /all on "client-1" VM.</h4>
 
 <P>Restart Client-1 in the Azure Portal</P>
 <img width="1752" height="642" alt="image" src="https://github.com/user-attachments/assets/809097c8-87c3-4135-abd1-2a08a4bd9c5d" />
@@ -279,48 +279,37 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <P>Running ipconfig /all on Client‑1 allowed me to view its full network configuration, including the DNS server settings. By confirming that Client‑1’s DNS points to DC‑1’s private IP address, I verified that the client is correctly configured to use the Domain Controller for name resolution. This successful check, combined with the earlier ping test, proves that the network setup and DNS integration are working as intended, completing the Active Directory preparation phase successfully.</P>
 
 <h3>Step 2 - Deployed Active Directory</h3>
-<h4>PART 1</h4>
 
 <h4>2.1 - Installed Active Directory in "dc-1" (Windows Server 2022)</h4>
-
 <P>Logged into "dc-1" as the Domain Controller-> Open the Server Manager -> CLick "Add Roles & Features under "Configure this local Server".</P>
 <img width="1440" height="749" alt="image" src="https://github.com/user-attachments/assets/a2004327-4675-4316-a6f3-0934b4585669" />
 <br>
-
 <p>Select "Role-Based or Feature-Based Installation -> Click "Next"</p>
 <img width="1004" height="704" alt="image" src="https://github.com/user-attachments/assets/5a6d45db-a391-4734-91ad-bf184f31f730" />
 <br>
-
 <p>Select "Select a server for the server pool<-> Click "Next"/p>
 <img width="988" height="708" alt="image" src="https://github.com/user-attachments/assets/9c020867-47c1-4dae-ab13-ac800b606d3b" />
 <br>
-
 <p>Click "Active Directory Domain Services -> Click "Add Features" ->Click "Next"</p>
 <img width="1278" height="656" alt="image" src="https://github.com/user-attachments/assets/26726537-1806-4391-bc41-cb139b108a96" />
 <br>
-
 <p>Click "Next</p>
 <img width="991" height="702" alt="image" src="https://github.com/user-attachments/assets/c77857d9-e9a7-4427-a466-ddadd859c86e" />
 <br>
-
 <p>Click "Next"</p>
 <img width="985" height="706" alt="image" src="https://github.com/user-attachments/assets/15a54590-5e93-4ec3-8045-cdce800a97af" />
 <br>
-
 <p>Check "Restart the destination server checkbox" -> Click "Yes" ->Click "Install" </p>
 <img width="1192" height="717" alt="image" src="https://github.com/user-attachments/assets/f525a457-731b-4eb2-91f4-b86e31cb5fda" />
 <br>
-
 <p>Wait for the Installation Progress ->Click "Close"</p>
 <img width="978" height="697" alt="image" src="https://github.com/user-attachments/assets/fde6cb33-3d39-4446-bcc3-f866a9dbf25e" />
 <img width="982" height="708" alt="image" src="https://github.com/user-attachments/assets/d1617ce8-c704-402c-a30f-3780b3a3250c" />
 <br>
-
 <h4>SUMMARY</h4>
 <p>Installed Active Directory Domain Services (AD DS) on dc‑1 is essential because it promotes the server to a Domain Controller. This enables centralized authentication, user and group management, and policy enforcement across the network. Without AD DS, client machines cannot join the domain or leverage Active Directory features.</p>
 
 <h4>2.2 -Promoted the Active Directory Server to the Domain Controller and Created a new Forest<br></h4>
-
 <p>Click on the Flag -> Click "Promote this Server to the Domain Controller" </p>
 <img width="1426" height="755" alt="image" src="https://github.com/user-attachments/assets/eaaf37df-4369-46a1-805c-8494499c3513" />
 <br>
@@ -333,27 +322,21 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <p>Uncheck "DNS Delegation" Checkbox -> Click "Next"</p>
 <img width="960" height="708" alt="image" src="https://github.com/user-attachments/assets/c41b81c0-822c-4569-8882-5d47f3060ed4" />
 <br>
-
 <p>Click "next"</p>
 <img width="969" height="710" alt="image" src="https://github.com/user-attachments/assets/2d9eb802-e73c-471a-95fd-d54acc53cd63" />
 <br>
-
 <p>Click "Next"</p>
 <img width="962" height="707" alt="image" src="https://github.com/user-attachments/assets/165e0cc4-6014-4e86-9bb6-a5ab45056d88" />
 <br>
-
 <p>Click "Next"</p>
 <img width="955" height="704" alt="image" src="https://github.com/user-attachments/assets/f44482b1-c900-427d-9fdb-d8fd51320c3c" />
 <br>
-
 <p>Pre-requisites Passed Successfully ->Click "Install"</p>
 <img width="942" height="697" alt="image" src="https://github.com/user-attachments/assets/c9958605-d57d-4bc8-865a-f9d6894060b7" />
 <br>
-
 <p>Installation in Progress</p>
 <img width="952" height="697" alt="image" src="https://github.com/user-attachments/assets/ebda74b7-3f6c-4418-8900-68fb69b596c9" />
 <br>
-
 <p>Successful Installation</p>
 <p>Log in as the domain controller in "dc-1" using my new forest domain "mydomain.com\labUser"</p>
 <img width="1110" height="709" alt="image" src="https://github.com/user-attachments/assets/e1d4500b-3224-46b5-a2e2-9918e81e1e5b" />
@@ -361,10 +344,9 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <br>
 <h4>SUMMARY</h4>
 <p>I installed Active Directory on DC‑1 (Windows Server 2022) and promoted it to a Domain Controller by creating a new forest called mydomain.com. This established the domain structure and centralized authentication. After the server restarted, I logged in using the domain account mydomain.com\labUser, confirming that the domain was successfully created and functional.</p>
-
 <br>
-<h4>2.3 - Create a Domain Admin user within the Domain.<br></h4>
 
+<h4>2.3 - Create a Domain Admin user within the Domain.<br></h4
 <p>Go to Start->Go to "Windows Adminstrative Tools"->Click on "Active Driectory Users & Computers"</p>
 <img width="812" height="998" alt="image" src="https://github.com/user-attachments/assets/8a071dbb-095e-4729-9a09-1e00048c2033" />
 <br>
@@ -418,9 +400,9 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <br>
 <h4>SUMMARY</h4>
 <P>I organized Active Directory by creating two OUs: _EMPLOYEES and _ADMINS. Then I added a new user, Reece Walsh with the username reece_admin, and elevated them by adding to the Domain Admins group. Finally, I logged back into DC‑1 using mydomain.com\reece_admin, confirming the account’s admin privileges and making it the primary account for your project.</P>
+<br>
 
-
-<h4>2.3 - Joined Client-1 to my domain (mydomain.com).</h4>
+<h4>2.4 - Joined Client-1 to my domain (mydomain.com).</h4>
 <p>From the Azure Protal -> Go to Virtual Machines-> Copy the "client-1" Public IP Address, and paste it on Remote Desktop Connection ->Click "Connect"</p>
 <img width="1915" height="718" alt="image" src="https://github.com/user-attachments/assets/f5460478-c22d-4df8-ba3b-bd3913b68fea" />
 <br>
@@ -454,7 +436,7 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <h4>SUMMARY</h4>
 <p>Joined Client‑1 to the domain (mydomain.com) is critical because it enables centralized authentication, policy enforcement, and resource access through the domain controller (dc‑1). This step validates that DNS and Active Directory are configured correctly, and ensures Client‑1 can fully participate in the managed domain environment.</p>
 
-<h4>2.4 -Logged in to Domain Controller to Verify and Confirm</h4>
+<h4>2.5 -Logged in to Domain Controller to Verify and Confirm</h4>
 <p>From the Azure Portal -> Go to Virtual Machines -> Copy "dc-1" Public IP Address</p>
 <img width="1918" height="601" alt="image" src="https://github.com/user-attachments/assets/132c20de-4032-4fca-8002-34d9fb74f381" />
 <br>
@@ -486,15 +468,36 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <br>
 <h4>SUMMARY</h4>
 Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms that the domain join was successful. Creating the _CLIENTS Organizational Unit and moving Client‑1 into it establishes a structured environment for centralized management.
+<br>
 
-<h3>Step 3 - Setup Remote Desktop for non-administrative users on Client-1</h3>
-
+<h4>2.6 Setup Remote Desktop for non-administrative users on Client-1</h4>
 <p>Logged in using "Client-1" using the "domain.com" domain</p>
 <img width="1120" height="708" alt="image" src="https://github.com/user-attachments/assets/33f206a3-d530-453e-b371-7f023ffeca6a" />
+<br>
+<p>Successful Login</p>
+<img width="1101" height="806" alt="image" src="https://github.com/user-attachments/assets/c80c6d4e-c9b3-4b0d-8ce6-e1760d8511d6" />
+<br>
+<p>Go to Start -> Type "System" -> Click on "System"</p>
+<img width="1076" height="936" alt="image" src="https://github.com/user-attachments/assets/9e66665f-cb45-473b-a62f-b2eee236905e" />
+<br>
+<p>Click on "Remote Desktop"</p>
+<img width="1283" height="932" alt="image" src="https://github.com/user-attachments/assets/fb7a703f-bc07-4fab-a12b-4a8328c46ec4" />
+<br>
+<p>Click on "Remote Desktop Users"</p>
+<img width="1281" height="931" alt="image" src="https://github.com/user-attachments/assets/6f13cba4-ab80-425b-a97d-c6f7d05756b0" />
+<br>
+<p>Click on "Add"</p>
+<img width="510" height="415" alt="image" src="https://github.com/user-attachments/assets/b4dde6bf-1f01-4f65-a74f-5215fb8393ee" />
+<br>
+<p>Type "Domain User" -> Ckick on "Check Names" -> Click "Ok"</p>
+<img width="625" height="354" alt="image" src="https://github.com/user-attachments/assets/1515fa73-b71d-4d89-9be4-c0c773f94583" />
+<br>
+<p>Click "Ok"</p>
+<img width="500" height="410" alt="image" src="https://github.com/user-attachments/assets/669371b3-ac1c-438d-b166-889790d7a75e" />
 
 
-<h3>PART 2</h3>
-<h3>Step 4 - Created Users with Powershell</h3>
+
+<h3>Step 3 - Created Users with Powershell</h3>
 
 <img width="952" height="872" alt="image" src="https://github.com/user-attachments/assets/3f0fd3c3-02e9-4fb0-908e-bf2fcc01ba00" />
 <p>I enabled Remote Desktop access for domain users on Client‑1 so that non‑administrative accounts can log in remotely. This ensures regular employees can connect to the workstation through the domain, supporting centralized access and testing Active Directory functionality beyond just admin accounts.</p>
