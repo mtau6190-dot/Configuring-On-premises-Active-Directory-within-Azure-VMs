@@ -501,7 +501,7 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 
 <h3>Step 3 - Created Users with Powershell</h3>
 
-<h4>3.1 Create Users and Test Login on Client‑1</h4>
+<h4>3.1 Create Users and Test Login on Client‑1 with New User</h4>
 <p>From the Azure Portal -> Go to Virtual Machines -> Copy "dc-1" Public IP Address</p>
 <img width="1918" height="601" alt="image" src="https://github.com/user-attachments/assets/132c20de-4032-4fca-8002-34d9fb74f381" />
 <br>
@@ -542,12 +542,39 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <p>The Users are being created now. Notice the user "kade.folo" user, I will later verify and confirm the user in Active Directory Computers & Users</p>
 <img width="1018" height="897" alt="image" src="https://github.com/user-attachments/assets/896ff288-aae8-4d95-8e8e-6b915c33a656" />
 <br>
+<p>Go to Start ->Type "Active Directory Users & Computer" ->Click on it (ADUC).</p>
+<img width="1048" height="973" alt="image" src="https://github.com/user-attachments/assets/a01c2950-a1e8-4b3a-8a89-6409bad4e7d7" />
+<br>
+<p>Click on mydomain.com ->Click on "_EMPLOYEES" -> Right-Click-> Click on "Find"</p>
+<img width="1106" height="682" alt="image" src="https://github.com/user-attachments/assets/933b8422-b405-4606-ad9d-65d848ae16bc" />
+<br>
+<p>Type the user we said verify and confirm "kade.folo"-> Click on "Find Now". Notice below that we found the user</p>
+<img width="648" height="667" alt="image" src="https://github.com/user-attachments/assets/99929dea-4ccc-48fd-b4e2-6f785acc9e4e" />
+<br>
+<p>Double Click on the user to show details</p>
+<img width="882" height="679" alt="image" src="https://github.com/user-attachments/assets/b197bee3-a6b3-4105-828b-ef0321b2d8d9" />
+<br>
+<p>Azure Portal -> Click "Virtual Machines" -> Copied "Client-1"s Public IP Address</p>
+<img width="1999" height="811" alt="image" src="https://github.com/user-attachments/assets/6966f844-0aa3-4bea-a8ac-0e8673c1d01f" />
+<br>
+<p>Click Windows + R -> Click "Ok" to open Remote Desktop Connection</p>
+<img width="462" height="279" alt="image" src="https://github.com/user-attachments/assets/d9368a95-8965-4bef-bd68-5194fafa48c9" />
+<br>
+<p>Side Note: Notice in the "kade.folo" Properties, the User is in the mydomain.com" domain.</p>
+<img width="523" height="691" alt="image" src="https://github.com/user-attachments/assets/07cbf216-3b6b-4f75-87b9-49ad2d915c4f" />
+<br>
+<p>Paste "client-1"s IP Address -> Click "ok" -> Enter the User "kade.folo" Credentials and Remember, the password is "Password1" -> Click "ok"</p>
+<img width="1103" height="703" alt="image" src="https://github.com/user-attachments/assets/104e1611-5d7c-44d9-8a8a-67d97ae76b09" />
+<br>
+<p>Click "Yes" -> </p>
+<img width="522" height="496" alt="image" src="https://github.com/user-attachments/assets/d98e7997-11a7-420d-8ccc-d4bbd078d664" />
+<br>
+<p>Successful Login</p>
+<img width="540" height="574" alt="image" src="https://github.com/user-attachments/assets/e3cb2179-6568-47af-a13e-ad35595e8fe2" />
+<br>
+<h4>SUMMARY</h4>
+<p>Created users with PowerShell in "dc-1" demonstrating automation and scalability in Active Directory. By provisioning thousands of accounts into the _EMPLOYEES OU and successfully logging into Client‑1 with one of them ("kade.folo"), I confirmed proper domain authentication and centralized user management.</p>
 
-
-
-
-
-<p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.In the second image, you can see that I'm in the Active Directory Users & Computers, and in the _EMPLOYEES group, you can see the users created. Finally, I randomly picked a user to log into client-1 as a user for that account and it was a success.</p>
 
 <h3>Step 4 - Group Policy & Managing Accounts</h3>
 <h4>4.1 -Dealing with Account Lockouts</h4>
