@@ -614,7 +614,21 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <p>Suggested Value message will pop up -> Click "Yes"</p>
 <img width="650" height="337" alt="image" src="https://github.com/user-attachments/assets/77075d94-27f4-46e8-93a2-5d906afa66a3" />
 <br>
-<p></p>
+<p>From the Azure Portal->Go to Virtual Machines -> Copy the "client-1" IP Address -> Paste it on remote desktop connection -> CLick "Connect"</p>
+<img width="538" height="315" alt="image" src="https://github.com/user-attachments/assets/5aaa2093-ccb7-43e3-bf6c-38b9a17ec6bf" />
+<br> 
+<p>Enter Admin Credentials -> CLick "Ok" -> Click "Yes"</p>
+<img width="579" height="729" alt="image" src="https://github.com/user-attachments/assets/19f93089-2bb1-44c0-ace2-96ae7ff7053d" />
+<br>
+<p>Go to Start ->Right-Click Start->Click on "Run"</p>
+<img width="484" height="780" alt="image" src="https://github.com/user-attachments/assets/69d68206-6c3f-49bb-a379-c31d596a6e1b" />
+<br>
+<p>Type "cmd" -> Click "ok"</p>
+![Uploading image.png…]()
+<br>
+<p>Type "gpupdate /force-> Click "Enter"</p>
+
+
 
 
 
