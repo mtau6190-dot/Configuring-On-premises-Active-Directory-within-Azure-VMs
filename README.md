@@ -487,25 +487,14 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <h4>SUMMARY</h4>
 Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms that the domain join was successful. Creating the _CLIENTS Organizational Unit and moving Client‑1 into it establishes a structured environment for centralized management.
 
+<h3>Step 3 - Setup Remote Desktop for non-administrative users on Client-1</h3>
 
-
-
-
- 
-<p>After restarting, logged back in using "Client-1" using the "domain.com" domain</p>
+<p>Logged in using "Client-1" using the "domain.com" domain</p>
 <img width="1120" height="708" alt="image" src="https://github.com/user-attachments/assets/33f206a3-d530-453e-b371-7f023ffeca6a" />
 
 
-
-<img width="940" height="841" alt="image" src="https://github.com/user-attachments/assets/a54c0f0d-82b7-4273-a465-6df2f736094a" />
-<img width="400" height="247" alt="image" src="https://github.com/user-attachments/assets/81a1b061-6bc0-4ea5-922e-87d2747cf3b4" />
-<img width="957" height="938" alt="image" src="https://github.com/user-attachments/assets/f38985c4-208e-48d9-b738-1317880201df" />
-<img width="942" height="467" alt="image" src="https://github.com/user-attachments/assets/bbc21f21-d8dc-47d6-8e04-05d274f003a4" />
-<p>I joined Client‑1 to the domain by logging in as the local admin and connecting it to mydomain.com, which required a restart. Back on DC‑1, I confirmed Client‑1 appeared in Active Directory Users and Computers (ADUC), proving the join was successful. Finally, I created a new OU called _CLIENTS and moved Client‑1 into it, organizing domain resources for easier management.</p>
-
-<h3>Step 3 - Created Users with Powershell</h3>
 <h3>PART 2</h3>
-<h4>3.1 - Setup Remote Desktop for Non-Administrative Users on Client-1(Windows 11).</h4>
+<h3>Step 4 - Created Users with Powershell</h3>
 
 <img width="952" height="872" alt="image" src="https://github.com/user-attachments/assets/3f0fd3c3-02e9-4fb0-908e-bf2fcc01ba00" />
 <p>I enabled Remote Desktop access for domain users on Client‑1 so that non‑administrative accounts can log in remotely. This ensures regular employees can connect to the workstation through the domain, supporting centralized access and testing Active Directory functionality beyond just admin accounts.</p>
