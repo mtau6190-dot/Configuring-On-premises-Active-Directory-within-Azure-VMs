@@ -578,42 +578,43 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 
 <h3>Step 4 - Group Policy & Managing Accounts</h3>
 <h4>4.1 -Dealing with Account Lockouts</h4>
-
-<img width="1186" height="689" alt="image" src="https://github.com/user-attachments/assets/4ed190b2-36f5-42a8-8ee2-db15230785d9" />
-<p>My test showed that even after multiple failed logins, the account was still accessible once the correct password was entered. This means the Account Lockout Policy is not configured in Active Directory. Without this policy, repeated failed attempts don’t trigger a lockout, leaving accounts vulnerable to brute‑force attacks. Configuring it enforces security by locking accounts after a set number of failed attempts.</p><br>
-
-<h4>4.2 -Configured the domain account Lockout Policy</h4>
-<img width="1463" height="852" alt="image" src="https://github.com/user-attachments/assets/f7ac6521-8fdd-4fc4-8fe0-0b96d9bf7dbf" />
-<img width="681" height="170" alt="image" src="https://github.com/user-attachments/assets/d783ea34-fb05-46d7-8b5f-ccdc511d8a2e" />
-
-<p>I logged into DC‑1 and used the Group Policy Management Console to edit the default domain policy. By navigating to the Account Policy settings, I configured the Account Lockout Policy. This ensures that after a set number of failed login attempts, user accounts will be locked, protecting the domain against brute‑force attacks and strengthening overall security.
-I configured the Account Lockout Policy with these settings:
-
-Lockout Duration: 10 minutes → accounts remain locked for 10 minutes before unlocking.
-
-Threshold: 5 invalid attempts → after 5 failed logins, the account is locked.
-
-Administrator lockout enabled → even admin accounts can be locked, increasing security.
-
-Reset counter after 10 minutes → if fewer than 5 failed attempts occur, the counter resets after 10 minutes.
-
-Together, these settings protect against brute‑force attacks while allowing accounts to recover automatically after a short period.</p><br>
-
-<h4>4.3 -Updated the Group Policy by using CMD:</h4>
-<img width="907" height="502" alt="image" src="https://github.com/user-attachments/assets/767f3778-abcc-4abf-9996-95aeed19fe02" />
-<p>I ran gpupdate /force on Client‑1 to immediately apply the updated Group Policy settings from the domain. This ensures that the Account Lockout Policy and any other changes made on DC‑1 are enforced without waiting for the next automatic refresh. It’s a crucial step to validate that my security configurations are active and working as intended.</p>
-<img width="661" height="721" alt="image" src="https://github.com/user-attachments/assets/7418581d-dbcc-4781-813f-ae16f485c338" />
-
-<p>I ran gpresult /r on DC‑1 to confirm that Group Policy settings—like the Account Lockout Policy—were successfully applied to the user reece_admin. The output shows that the policy was pulled from dc-1.mydomain.com, and the user is located in the _ADMINS OU, verifying that my Group Policy configuration is active and targeting the correct domain objects. This confirms my domain’s security policies are now enforced.</p>
-
-<h4>4.4 -Enabled & Disabled Accounts</h4>
-<img width="696" height="180" alt="image" src="https://github.com/user-attachments/assets/f1563217-ab66-4738-b211-e0414003e163" />
-<p>My test confirmed that the Account Lockout Policy is now active. After multiple failed login attempts using the rosaf.nada account, Remote Desktop displayed a lockout warning, preventing access. This proves that the Group Policy settings—especially the lockout threshold and duration—are successfully enforced across the domain, strengthening security against unauthorized access.</p>
-<img width="505" height="670" alt="image" src="https://github.com/user-attachments/assets/a4727e56-0ada-4566-bb31-bab3cef124dc" />
-
-I unlocked the rosaf.nada account in Active Directory after it was locked due to too many failed login attempts. This confirms that my Account Lockout Policy is functioning correctly, and that I—as a domain admin—can manually restore access when needed. It’s a key part of managing user security and ensuring controlled recovery from lockouts.<br>
-
-
+<p>Azure Portal -> Click Virtual Machines -> Copied "dc-1s" Public IP Address</p>
+<img width="1966" height="648" alt="image" src="https://github.com/user-attachments/assets/8d8fbfd3-a8a4-48fd-8e55-e7d505666fbe" />
+<br>
+<p>Click Windows + R -> Click "Ok" to Open Remote Desktop Connection</p>
+<img width="467" height="281" alt="image" src="https://github.com/user-attachments/assets/42fb5d06-22f1-4ce1-b18d-a8a0a663baec" />
+<br>
+<p>Paste the IP Address for "dc-1" -> Click "Connect"</p>
+<img width="1462" height="538" alt="image" src="https://github.com/user-attachments/assets/68ddb3a1-bc07-433e-aca2-4fe57fdcc084" />
+<br>
+<p>Enter Credentials ->Click "ok"</p>
+<img width="558" height="544" alt="image" src="https://github.com/user-attachments/assets/1f060f15-2c0f-4f67-88d5-cb0bffe576cd" />
+<br>
+<p>Click "Yes"</p>
+<img width="525" height="497" alt="image" src="https://github.com/user-attachments/assets/a7c926f7-3300-4e66-bf83-34c8a2b13169" />
+<br>
+<p>Go to Start ->Right-Click Start->Click on "Run"</p>
+<img width="484" height="780" alt="image" src="https://github.com/user-attachments/assets/69d68206-6c3f-49bb-a379-c31d596a6e1b" />
+<br>
+<p>Type "gpmc.msc" -> Click "Ok". This will open up the "Group Policy Management Console"</p>
+<img width="463" height="280" alt="image" src="https://github.com/user-attachments/assets/0d6cac60-c88b-4f7c-a3ea-4198a959cc99" />
+<br>
+<p>Click on "Forest:mydomain.com-> CLick on "domains" -> Click on "mydomain.com" (You will notice that a default group policy is already created by the system "Default Domain Policy"</p>
+<img width="951" height="664" alt="image" src="https://github.com/user-attachments/assets/5c55a61b-0b86-4763-9140-008ed815a4ff" />
+<br>
+<p>Right-Click on "Default Domain Policy" -> Click on "Edit"</p>
+<img width="941" height="662" alt="image" src="https://github.com/user-attachments/assets/d694337f-5f84-43dc-a6fe-8552d23b891e" />
+<br>
+<p>Expand the Following: Computer Configuration -> Windows Settings -> Security Settings -> Account Policies -> Account Lockout Policy</p>
+<img width="983" height="718" alt="image" src="https://github.com/user-attachments/assets/08f20e0d-f10f-40aa-8251-273441a156ab" />
+<br>
+<p>Double Click on "Account Lockout Duration -> Check the checkbox to "Define the Policy Setting (Example, mine is set to 5 Minutes) -> Click Apply</p>
+<img width="1525" height="646" alt="image" src="https://github.com/user-attachments/assets/50a93f14-7eaa-457c-a9ec-479fda7568c9" />
+<br>
+<p>Suggested Value message will pop up -> Click "Yes"</p>
+<img width="650" height="337" alt="image" src="https://github.com/user-attachments/assets/77075d94-27f4-46e8-93a2-5d906afa66a3" />
+<br>
+<p></p>
 
 
 
