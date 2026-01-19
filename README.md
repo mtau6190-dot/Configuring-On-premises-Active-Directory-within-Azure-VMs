@@ -451,6 +451,49 @@ Together, they simulate an on‑premises AD environment inside Azure, letting me
 <p>Click "Yes" to Restart the "client-1" VM.</p>
 <img width="452" height="225" alt="image" src="https://github.com/user-attachments/assets/c455c2cf-ec9c-4489-9faf-7d5afa32cc40" />
 <br>
+<h4>SUMMARY</h4>
+<p>Joined Client‑1 to the domain (mydomain.com) is critical because it enables centralized authentication, policy enforcement, and resource access through the domain controller (dc‑1). This step validates that DNS and Active Directory are configured correctly, and ensures Client‑1 can fully participate in the managed domain environment.</p>
+
+<h4>2.4 -Logged in to Domain Controller to Verify and Confirm</h4>
+<p>From the Azure Portal -> Go to Virtual Machines -> Copy "dc-1" Public IP Address</p>
+<img width="1918" height="601" alt="image" src="https://github.com/user-attachments/assets/132c20de-4032-4fca-8002-34d9fb74f381" />
+<br>
+<p>Enter Credentials -> Click "Ok"</p>
+<img width="1109" height="520" alt="image" src="https://github.com/user-attachments/assets/3c60a8a4-ba14-4c5d-8bc7-85b08f36bca2" />
+<br>
+<p>Click "Yes"</p>
+<img width="523" height="501" alt="image" src="https://github.com/user-attachments/assets/81677b04-bbf4-42b0-a37a-91dccb87f572" />
+<br>
+<p>Go to start -> Click on "Administartive tools" -> Click on Active Directory Computers & Users</p>
+<img width="816" height="707" alt="image" src="https://github.com/user-attachments/assets/bfda30d1-1811-41ce-95a8-f72d078b8725" />
+<br>
+<p>Click "mydomain" ->Click on "Computers" to verify and confirm</p>
+<img width="947" height="666" alt="image" src="https://github.com/user-attachments/assets/ea6e3db0-0aac-472f-abb7-bbc13090a2a5" />
+<br>
+<p>Richt-click "mydomain.com" -> Click on "New" -> CLick on "Organizational Unit" </p>
+<img width="949" height="671" alt="image" src="https://github.com/user-attachments/assets/cc70fd25-68a2-47b7-94aa-ff450ecf1185" />
+<br>
+<p>Created new "OU" and named it "_CLIENTS" ->Click "Ok"</p>
+<img width="545" height="481" alt="image" src="https://github.com/user-attachments/assets/de09c229-d8d9-4b4a-82ff-84cc3cbb3891" />
+<br>
+<p>Click on "Computers" -> Drag "client-1" into the new OU Created "_CLIENTS"</p>
+<img width="684" height="679" alt="image" src="https://github.com/user-attachments/assets/093e7d1b-eb57-475b-86a7-d4b24248e410" />
+<br>
+<p>Click "Yes"</p>
+<br>
+<p>Confirm Folder. Click on "_CLIENTS</p>
+<img width="680" height="450" alt="image" src="https://github.com/user-attachments/assets/49add050-ef50-40b3-a311-73e0760191b1" />
+<br>
+<h4>SUMMARY</h4>
+Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms that the domain join was successful. Creating the _CLIENTS Organizational Unit and moving Client‑1 into it establishes a structured environment for centralized management.
+
+
+
+
+
+ 
+<p>After restarting, logged back in using "Client-1" using the "domain.com" domain</p>
+<img width="1120" height="708" alt="image" src="https://github.com/user-attachments/assets/33f206a3-d530-453e-b371-7f023ffeca6a" />
 
 
 
