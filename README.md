@@ -502,7 +502,15 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <h3>Step 3 - Created Users with Powershell</h3>
 
 <h4>3.1 Create Users and Test Login on Client‑1</h4>
-<p></p>
+<p>From the Azure Portal -> Go to Virtual Machines -> Copy "dc-1" Public IP Address</p>
+<img width="1918" height="601" alt="image" src="https://github.com/user-attachments/assets/132c20de-4032-4fca-8002-34d9fb74f381" />
+<br>
+<p>Enter Credentials -> Click "Ok"</p>
+<img width="1109" height="520" alt="image" src="https://github.com/user-attachments/assets/3c60a8a4-ba14-4c5d-8bc7-85b08f36bca2" />
+<br>
+<p>Click "Yes"</p>
+<img width="523" height="501" alt="image" src="https://github.com/user-attachments/assets/81677b04-bbf4-42b0-a37a-91dccb87f572" />
+<br></p>
 
 <p>I ran the PowerShell script on DC‑1 to automate user account creation and place them in the _EMPLOYEES OU, ensuring consistency and efficiency in managing accounts. Tested a login on Client‑1 with one of those accounts verified that domain authentication works correctly, proving the accounts were active and integrated into the domain environment.In the second image, you can see that I'm in the Active Directory Users & Computers, and in the _EMPLOYEES group, you can see the users created. Finally, I randomly picked a user to log into client-1 as a user for that account and it was a success.</p>
 
