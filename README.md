@@ -5,7 +5,7 @@
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 Project Summary:<br />
 <br />
-This project demonstrates the setup and configuration of IT infrastructure in Microsoft Azure. It includes Active Directory deployment, DNS configuration, network security, file sharing, and application installation.<br />
+This project demonstrates the deployment of a on‑premises Active Directory environment in Microsoft Azure, simulating enterprise identity and access management in hybrid/cloud infrastructures. It includes AD DS deployment, DNS configuration, Group Policy enforcement, PowerShell automation, and security testing.<br />
 
 <h2>Environments and Technologies Used</h2>
 
