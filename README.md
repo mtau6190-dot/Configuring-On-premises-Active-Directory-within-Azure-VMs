@@ -670,7 +670,17 @@ Verifyied Client‑1 in Active Directory Users and Computers (ADUC) confirms tha
 <br>
 <h4>SUMMARY</h4>
 <p>Implemented and tested account lockout policies through Group Policy strengthens domain security by preventing unauthorized access attempts. The successful lockout of the user account confirmed that the policy was applied correctly, while unlocking the account in ADUC demonstrated secure recovery and centralized management.</p>
+<br>
 
-
-
-
+<h3>Step 4 - Observing Logs</h3>
+<p>In the "client-1" as "kade.folo" the User, Go to start and Type "eventvwr.msc"-> Right-Click and Click on "Run as Administrator".
+<img width="974" height="851" alt="image" src="https://github.com/user-attachments/assets/e4d350d7-5f37-4a73-ad2c-cc6b1c915c82" />
+<br>
+<p>Enter the Domain Controller User Credentials "mydomain.com\reece_admin" -> Click on "Ok"</p>
+<img width="579" height="739" alt="image" src="https://github.com/user-attachments/assets/4692268c-7a02-4fec-809d-8b78afa4a213" />
+<br>
+<p>Expand "Windows Logs" -> Click on "Security". Notice the "Audit Failure" and the reason for it.</p>
+<img width="1574" height="978" alt="image" src="https://github.com/user-attachments/assets/40092c84-efea-4d6a-b364-53661ddd2bdb" />
+<br>
+<h4>SUMMARY</h4>
+<p>Observed logs in Event Viewer allowed me as an administrators to monitor authentication attempts and security events. Audit failures confirm that Group Policies and account lockout policies are functioning correctly, providing visibility into user activity and potential security issues.</p>
